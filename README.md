@@ -33,13 +33,13 @@ Free camera and level selection are outside the current requested scope. This is
 
 | Work | Status |
 | --- | --- |
-| Identify the PS2 USA release | SLUS-20904; executable expected as SLUS_209.04. The user's actual disc has not been inspected. |
+| Identify the PS2 USA release | Actual USA disc inspected: SLUS_209.04; executable and source ISO hashed. |
 | Research existing controller cheats | Published PS2 button sequences located; not yet tested by this project. |
 | Search prototype sources | Hidden Palace, Internet Archive metadata, auction records, and indexed forum results searched. |
 | Verify an actual PS2 prototype | An August 31, 2004 test disc is documented by Heritage Auctions. No verified public dump located in this search. |
 | Check Wayback Machine | Targeted ASSEMblergames CDX request returned HTTP 503. Archived forum coverage remains incomplete. |
-| Obtain the working ISO | User reports the ISO is on Google Drive. Exact link/file ID is still needed; Drive discovery did not locate it. |
-| Inspect executable and assets | Pending ISO access. |
+| Obtain the working ISO | Actual Movie USA ISO found locally and inspected on October 21, 2026. |
+| Inspect executable and assets | Executable and INI inspected; retained debug-display path traced. Menu asset investigation continues. |
 | Enable and test a PS2 debug menu | Not achieved; no working PS2 debug-menu patch is claimed. |
 | Release cheats or patches | No project-tested patch or release yet. |
 
@@ -73,8 +73,8 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Next steps
 
-1. Obtain the exact Drive link for the Movie PS2 ISO.
-2. Identify the disc serial, region, executable, and hashes before proposing patches.
+1. Test the minimal controller-debug probe on the owner's CFW PS3 and record its visible output.
+2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
 3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
 4. Inspect HIP/HOP assets for unused UI and development content; compare relevant prototypes where useful.
 5. Continue targeted forum and Wayback research around the August 31, 2004 disc and other documented builds.
@@ -91,8 +91,8 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 | Public PS2 prototype search | 🔄 In progress | No verified public dump located so far |
 | Forum and Wayback research | 🔄 In progress | Archive coverage incomplete; CDX request returned HTTP 503 |
 | Controller cheat verification | ⏳ Pending | Published sequences collected; not tested here |
-| Working ISO access | ⏳ Pending | Exact Google Drive link/file ID needed |
-| Executable and asset inspection | ⏳ Pending | Requires the working ISO |
+| Working ISO access | ✅ Inspected | USA ISO, executable and INI verified locally |
+| Executable and asset inspection | 🔄 In progress | Retained debug path traced; full menu investigation pending |
 | Debug menu activation | ⏳ Pending | No working patch verified |
 | PCSX2 / hardware validation | ⏳ Pending | No candidate patch ready for testing |
 
@@ -119,3 +119,10 @@ Keep platform, region, and verification status attached to each finding. Publish
 
 
 *The SpongeBob SquarePants Movie and associated characters belong to their respective owners. This is an independent research project.*
+
+
+## Debug-path milestone — October 21, 2026
+
+**Proven:** the actual USA PS2 image has been inspected. `displayPadDebugInfo` is parsed and gates a retained handler; a local diagnostic ISO enables it with exactly **40 changed bytes**, all in one INI comment line, leaving executable code untouched. **Unknown:** visible output and complete debug-menu restoration. `ShowMenuOnBoot=1` was already stock and is not a debug unlock. The controller-debug probe awaits the owner's hardware test.
+
+[Read the full evidence, addresses, hashes, limitations, and test steps](docs/DEBUG-PATH-2026-10-21.md).
