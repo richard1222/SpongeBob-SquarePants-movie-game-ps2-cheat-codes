@@ -1,14 +1,35 @@
-# The SpongeBob SquarePants Movie — PS2 cheat and debug research
+![Platform](https://img.shields.io/badge/Platform-PS2-blue)
+![Region](https://img.shields.io/badge/Target_Region-USA-green)
+![Serial](https://img.shields.io/badge/Target_Serial-SLUS__209.04-orange)
+![Status](https://img.shields.io/badge/Status-Research_in_progress-yellow)
+
+# The SpongeBob SquarePants Movie (PS2) — cheats and debug research
 
 Research for the 2004 Heavy Iron Studios console game, focused on PlayStation 2. Last updated: October 21, 2026.
 
-## Goal
+---
+
+## Table of Contents
+
+- [Project Goal](#project-goal)
+- [Current Status](#current-status)
+- [Prototype Findings](#prototype-findings)
+- [PS2 Button Cheats](#ps2-button-cheats)
+- [Next Steps](#next-steps)
+- [Progress Chart](#progress-chart)
+- [Tools](#tools)
+- [Resources](#resources)
+- [Project Notes](#project-notes)
+
+---
+
+## Project goal
 
 Find and verify cheat codes, investigate whether a debug menu can be restored or enabled, and identify other useful development features and unused content. Research prototype, beta, review, and demo builds where evidence is available.
 
 Free camera and level selection are outside the current requested scope. This is a separate project from Creature from the Krusty Krab.
 
-## Current progress
+## Current status
 
 | Work | Status |
 | --- | --- |
@@ -31,7 +52,9 @@ Free camera and level selection are outside the current requested scope. This is
 
 No verified publicly downloadable PS2 prototype was found in the searches completed so far. This does not establish that none exists. Forum and Wayback research is incomplete.
 
-## Published PS2 controller cheats — awaiting local testing
+## PS2 button cheats
+
+**Status: published sequences located; local testing pending.**
 
 Source: [GameFAQs PS2 cheats](https://gamefaqs.gamespot.com/ps2/920196-the-spongebob-squarepants-movie/cheats).
 
@@ -57,10 +80,42 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 5. Continue targeted forum and Wayback research around the August 31, 2004 disc and other documented builds.
 6. Test candidate changes in PCSX2, documenting original bytes, patched bytes, addresses, game CRC, activation steps, and results.
 
-## Research tools and references
+---
+
+## Progress Chart
+
+| Task | Progress | Evidence |
+| --- | --- | --- |
+| Project scope | ✅ Defined | Debug menu, cheats, development features, and unused content |
+| PS2 prototype identification | ✅ Documented | August 31, 2004 test disc auction record |
+| Public PS2 prototype search | 🔄 In progress | No verified public dump located so far |
+| Forum and Wayback research | 🔄 In progress | Archive coverage incomplete; CDX request returned HTTP 503 |
+| Controller cheat verification | ⏳ Pending | Published sequences collected; not tested here |
+| Working ISO access | ⏳ Pending | Exact Google Drive link/file ID needed |
+| Executable and asset inspection | ⏳ Pending | Requires the working ISO |
+| Debug menu activation | ⏳ Pending | No working patch verified |
+| PCSX2 / hardware validation | ⏳ Pending | No candidate patch ready for testing |
+
+**Legend:** ✅ Documented or defined · 🔄 In progress · ⏳ Pending
+
+## Tools
+
+- **IndustrialPark** — HIP/HOP asset inspection and editing for the Movie console game.
+- **PCSX2** — planned runtime checks for candidate cheats and debug features.
+
+No project-specific patching script has been released yet.
+
+---
+
+## Resources
 
 - [IndustrialPark](https://github.com/igorseabra4/IndustrialPark): HIP/HOP editor supporting the Movie console game.
 - [Console game research on The Cutting Room Floor](https://tcrf.net/The_SpongeBob_SquarePants_Movie_(GameCube,_PlayStation_2,_Xbox)).
 - [PS2 USA disc reference](https://psxdatacenter.com/psx2/games2/SLUS-20904.html).
 
+## Project notes
+
 Keep platform, region, and verification status attached to each finding. Publish research, original tools, and patches here; the working ISO and private Drive link are not included.
+
+
+*The SpongeBob SquarePants Movie and associated characters belong to their respective owners. This is an independent research project.*
