@@ -17,6 +17,8 @@ def message_matches(expected, output):
 
 def main():
     parser=argparse.ArgumentParser()
+    parser.add_argument('--patcher', default='health-menu/Apply-HealthMenu.ps1', help='Patcher path relative to tools/ for fixture checks')
+    parser.add_argument('--manifest', default='HealthMenuPatch.json', help='Fixture manifest filename expected by the selected patcher')
     parser.add_argument('--iso-dir', type=Path, help='Optional directory containing stage ISO inputs')
     parser.add_argument('--original-iso', type=Path, help='Original USA ISO for full stage checks')
     parser.add_argument('--work-dir', type=Path, default=Path(tempfile.gettempdir()))
@@ -26,7 +28,8 @@ def main():
     assert scratch.parent==base and scratch.name.startswith('spongebob-v02-tests-')
     tools=Path(__file__).resolve().parent
     stages=json.loads((tools/'STAGES.json').read_text())
-    template=(tools/'health-menu/Apply-HealthMenu.ps1').read_bytes()
+    template=(tools/args.patcher).read_bytes()
+    assert Path(args.manifest).name==args.manifest,'Manifest must be a filename'
     source=bytes(range(256))*16;expected=bytearray(source);expected[16:20]=b'ABCD'
     initial={'input_sha256':hashlib.sha256(source).hexdigest(),'output_sha256':hashlib.sha256(expected).hexdigest(),'patches':[{'iso_offset':16,'old':source[16:20].hex(),'new':b'ABCD'.hex()}]}
     results=[]
@@ -50,7 +53,7 @@ def main():
             elif case=='output mismatch cleanup':spec['output_sha256']='0'*64;want='Output hash mismatch'
             elif case=='existing output':dest.write_bytes(b'KEEP THIS');want='already exists'
             elif case=='same input output':dest=inp;want='different files'
-            (folder/'HealthMenuPatch.json').write_text(json.dumps(spec))
+            (folder/args.manifest).write_text(json.dumps(spec))
             command=['powershell.exe','-NoProfile','-ExecutionPolicy','Bypass','-File',str(script),'-InputIso',str(inp),'-OutputIso',str(dest)]
             if case=='hash cmdlet unavailable':
                 wrapper=folder/'hash compatibility.ps1'

@@ -1,0 +1,23 @@
+{
+  "combined_iso_sha256": "8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883",
+  "combined_elf_sha256": "96b03ca18a8b2db1a033a291e2970d0b515f7f400737a2057c114ef6861f7eeb",
+  "size_bytes": 1249804288,
+  "added_changed_bytes_vs_health_menu": 22,
+  "menu_instruction_cases": 6656,
+  "menu_pointer_guard_cases": 36,
+  "menu_hp_readout_cases": 41,
+  "menu_sequence_steps": 12,
+  "callback_comparison_cases": 352,
+  "callback_executions": 704,
+  "menu_refill_interaction_cases": 704,
+  "retail_damage_cases": 96,
+  "actual_iso_menu_words_match_tested_spec": true,
+  "menu_elf_preserved_outside_two_refill_sites": true,
+  "hardware_tested": false,
+  "limits": "Synthetic valid runtime objects; external hash/object/event, renderer, position/scene and sound backend calls modeled. This does not boot PS2/PS3, test live cheat input, saves or transitions.",
+  "patcher_fixture_cases": 14,
+  "message_tests": 8,
+  "md5": "36edd125f763fbcfab3d2bcc01fe2d6b",
+  "source_commit": "1090ef2a851b30fbb409ffe2f7622cb27d11e21a",
+  "build_method": "Hardened incremental PowerShell patcher; output hash matches separately constructed reference image"
+}
