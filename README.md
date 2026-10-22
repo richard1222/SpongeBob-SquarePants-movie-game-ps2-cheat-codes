@@ -131,3 +131,8 @@ Keep platform, region, and verification status attached to each finding. Publish
 ### Hardware report — October 21, 2026
 
 The owner reports that the controller-debug probe **worked** in the CFW PS3 testing context. This records the owner's result; a screenshot or detailed description is still needed to distinguish successful boot from visible debug output. **Full developer-menu restoration remains unconfirmed.** [Hardware report and evidence](docs/DEBUG-PATH-2026-10-21.md#owner-hardware-report--october-21-2026).
+
+
+### Visible overlay confirmed; interactive-toggle experiment
+
+The owner explicitly confirms that the **controller/status overlay appeared** on the CFW PS3. The always-on display is therefore hardware-confirmed by owner report. A separate **custom Select-toggle candidate** now passes 20 instruction-level cases, full-ISO change-boundary verification, and patcher input/overwrite guards; **its console behavior is not yet tested**. Full original developer-menu restoration remains unconfirmed. [Evidence and next test](docs/DEBUG-PATH-2026-10-21.md#overlay-confirmed-select-toggle-candidate--october-21-2026).
