@@ -1,0 +1,43 @@
+key,stock_ini_value,elf_literal,literal_addresses,direct_address_refs,state,hardware_status
+G.KarateSpin,1,g.KarateSpin,0x62d400,0x46c42c,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.Bash,0,g.Bash,0x62d432,0x46c4a0,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.MachoBowl,0,g.MachoBowl,0x62d40d,0x46c44c,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.WaveGuitar,0,g.WaveGuitar,0x62d419,0x46c468,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.BellyBump,1,g.BellyBump,0x62d445,0x46c4d8,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.Cartwheel,0,g.Cartwheel,0x62d426,0x46c484,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.BellyFlop,0,g.BellyFlop,0x62d439,0x46c4bc,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.Throw,0,g.Throw,0x62d451,0x46c4f4,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.HealthSB,0,g.HealthSB,0x62d459,0x46c510,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.HealthPat,0,g.HealthPat,0x62d464,0x46c52c,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.Gravity,30,g.Gravity,0x62d178,0x46bf50,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.TakeDamage,1,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+G.DamageTimeHit,1.5,g.DamageTimeHit,0x62cc93,0x46b664,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+NoMusic,0,NoMusic,0x62ca87,0x46ad7c,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+NoCutscenes,0,NoCutscenes,0x62ca99,0x46adcc,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+NoPadCheck,(absent),NoPadCheck,0x62caa5,0x46adec,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+AsyncLoadingScreen,(absent),AsyncLoadingScreen,0x62d4f0,0x46c8dc,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+SB.JumpGravity,5,sb.JumpGravity,0x624b99,0x31d7d8,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+BOOT,BB02,BOOT,0x62c9f5,0x46aa28,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.AttractModeDuringGameplay,0,g.AttractModeDuringGameplay,0x62d53b,0x46c968,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.ShinyValuePurple,50,g.ShinyValuePurple,0x62cb50,0x46b3cc,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.ShinyValueBlue,10,g.ShinyValueBlue,0x62cb63,0x46b3e8,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.ShinyValueGreen,5,g.ShinyValueGreen,0x62cb74,0x46b404,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.ShinyValueYellow,2,g.ShinyValueYellow,0x62cb86,0x46b420,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+G.ShinyValueRed,1,g.ShinyValueRed,0x62cb99,0x46b43c,literal and address references present; semantic/runtime validation pending,not tested in this inventory
+displayPadDebugInfo,(absent),displayPadDebugInfo,0x62d1b1,0x46c038,literal and address references present; semantic/runtime validation pending,owner confirmed overlay and Select toggle
+DebugMode,,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade1,250,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade2,1250,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade3,1500,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade4,2000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade5,2000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade6,2000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade7,2000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade8,3000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade9,3000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade10,3000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade11,3000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade12,4000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade13,4000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+Upgrade14,4000,(absent),,,no direct address reference found by this scanner,not tested in this inventory
+
