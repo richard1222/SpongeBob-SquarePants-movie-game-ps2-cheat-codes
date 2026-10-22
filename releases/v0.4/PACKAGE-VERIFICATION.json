@@ -1,0 +1,83 @@
+{
+  "version": "v0.4",
+  "source_commit": "8201ee937d99f85dc101696f79a3ae9a3afaab46",
+  "archive_name": "SpongeBob-Movie-Debug-Tools-v0.4.zip",
+  "archive_bytes": 235414,
+  "sha256": "2f0eb5ebd90e11adb0dda19276afc856ad7250f83f478fd6bd85095f20848cb2",
+  "entries": 120,
+  "cumulative_stages": 8,
+  "independent_retail_probes": 2,
+  "stage_hash_chain_verified": true,
+  "zip_crc_exact_contents_and_file_hashes_verified": true,
+  "python_sources_parse": true,
+  "all_repository_files_match_github_blob_ids": true,
+  "tools_only_extension_audit": true,
+  "owner_combined_report": "everything worked in order no issues",
+  "extracted_package_runtime_tests": "passed",
+  "default_patcher_fixture_cases": 14,
+  "combined_patcher_fixture_cases": 14,
+  "message_tests": 8,
+  "full_iso_stages_rebuilt": [
+    {
+      "stage": "overlay",
+      "output_sha256": "eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "select-toggle",
+      "output_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "debug-panel",
+      "output_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "music-panel",
+      "output_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "debug-menu",
+      "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "damage-menu",
+      "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "health-menu",
+      "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a",
+      "bytes": 1249804288
+    },
+    {
+      "stage": "health-menu-refill",
+      "output_sha256": "8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883",
+      "bytes": 1249804288
+    }
+  ],
+  "all_stage_input_hashes_unchanged": true,
+  "combined_instruction_receipt": {
+    "combined_iso_sha256": "8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883",
+    "combined_elf_sha256": "96b03ca18a8b2db1a033a291e2970d0b515f7f400737a2057c114ef6861f7eeb",
+    "size_bytes": 1249804288,
+    "added_changed_bytes_vs_health_menu": 22,
+    "menu_instruction_cases": 6656,
+    "menu_pointer_guard_cases": 36,
+    "menu_hp_readout_cases": 41,
+    "menu_sequence_steps": 12,
+    "callback_comparison_cases": 352,
+    "callback_executions": 704,
+    "menu_refill_interaction_cases": 704,
+    "retail_damage_cases": 96,
+    "actual_iso_menu_words_match_tested_spec": true,
+    "menu_elf_preserved_outside_two_refill_sites": true,
+    "hardware_tested": false,
+    "limits": "Synthetic valid runtime objects; external hash/object/event, renderer, position/scene and sound backend calls modeled. This does not boot PS2/PS3, test live cheat input, saves or transitions."
+  },
+  "shipped_owner_receipt_preserved": true,
+  "combined_hardware_tested": "owner-reported ordered test passed on established CFW PS3 CECH-2001A; no new console run during packaging"
+}

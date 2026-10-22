@@ -1,0 +1,33 @@
+{
+  "url": "https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/tag/v0.4",
+  "tag_commit": "8201ee937d99f85dc101696f79a3ae9a3afaab46",
+  "assets": [
+    {
+      "name": "PACKAGE-VERIFICATION.json",
+      "size": 3327,
+      "digest": "sha256:47cfc573add15dc3b5402a952f032cc359c5a52538195e51642e582165550248",
+      "url": "https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/download/v0.4/PACKAGE-VERIFICATION.json",
+      "download_verified": true,
+      "sha256": "47cfc573add15dc3b5402a952f032cc359c5a52538195e51642e582165550248"
+    },
+    {
+      "name": "SHA256SUMS.txt",
+      "size": 104,
+      "digest": "sha256:b9a08589c4bb1d71260a6c430cfc03dbf64fec3c87ddd164057b37dc1aa4dd46",
+      "url": "https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/download/v0.4/SHA256SUMS.txt",
+      "download_verified": true,
+      "sha256": "b9a08589c4bb1d71260a6c430cfc03dbf64fec3c87ddd164057b37dc1aa4dd46"
+    },
+    {
+      "name": "SpongeBob-Movie-Debug-Tools-v0.4.zip",
+      "size": 235414,
+      "digest": "sha256:2f0eb5ebd90e11adb0dda19276afc856ad7250f83f478fd6bd85095f20848cb2",
+      "url": "https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/download/v0.4/SpongeBob-Movie-Debug-Tools-v0.4.zip",
+      "download_verified": true,
+      "sha256": "2f0eb5ebd90e11adb0dda19276afc856ad7250f83f478fd6bd85095f20848cb2"
+    }
+  ],
+  "draft": false,
+  "prerelease": false,
+  "downloaded_assets_equal_local": true
+}

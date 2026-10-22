@@ -1,7 +1,7 @@
 ![Platform](https://img.shields.io/badge/Platform-PS2-blue)
 ![Region](https://img.shields.io/badge/Target_Region-USA-green)
 ![Serial](https://img.shields.io/badge/Target_Serial-SLUS__209.04-orange)
-![Stable](https://img.shields.io/badge/Stable-v0.3-blue)
+![Stable](https://img.shields.io/badge/Stable-v0.4-blue)
 ![Development](https://img.shields.io/badge/Development-v0.4-orange)
 
 # The SpongeBob SquarePants Movie (PS2) — cheats and debug research
@@ -33,11 +33,11 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
-**v0.4 release preparation:** complete tools package with eight cumulative patch stages, including the combined HealthMenu and original six-slot cheat refill. The owner reports **“everything worked in order no issues”** on CFW PS3 Slim CECH-2001A / ps2_netemu. Exact post-cheat HP was not separately recorded. [Console receipt](docs/HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md) · [v0.4 notes](releases/v0.4/RELEASE_NOTES.md) · [Quick start](QUICK_START.txt).
+**Latest stable tools release: [v0.4](https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/tag/v0.4).** complete tools package with eight cumulative patch stages, including the combined HealthMenu and original six-slot cheat refill. The owner reports **“everything worked in order no issues”** on CFW PS3 Slim CECH-2001A / ps2_netemu. Exact post-cheat HP was not separately recorded. [Console receipt](docs/HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md) · [v0.4 notes](releases/v0.4/RELEASE_NOTES.md) · [Quick start](QUICK_START.txt).
 
 The combined ISO hash remains `8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883`. The four menu rows control music, XYZ, scene/controller diagnostics and Damage with live HP. Refill uses the original paused shoulder-button cheat; it adds no row. [Build evidence and ISO download](docs/HEALTH-MENU-REFILL-2026-10-22.md).
 
-Local integration checks pass 6,656 menu cases, 352 callback comparisons (704 executions), 704 menu/refill interaction cases, 41 HP cases, 36 pointer guards, 96 damage cases and the patcher fixtures. The final extracted archive is checked before publication. [Release status](releases/v0.4/DEVELOPMENT_STATUS.md). Published v0.3 remains available unchanged; v0.4 publication is established by its GitHub release page.
+Local integration checks pass 6,656 menu cases, 352 callback comparisons (704 executions), 704 menu/refill interaction cases, 41 HP cases, 36 pointer guards, 96 damage cases and the patcher fixtures. The exact extracted archive passed all eight full-image rebuilds, both 14-case patcher fixture suites and the combined instruction checks. All three published attachments were downloaded and matched against their local SHA-256 values. [Release status](releases/v0.4/DEVELOPMENT_STATUS.md). Published v0.3 remains available unchanged. [Package and publication receipts](releases/v0.4/PUBLISHED-RELEASE.json).
 
 GameCube structure/event references were checked against actual PS2 menu assets to identify the pause counter and its separate power-up refresh group. [Cross-platform findings](docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md). The nine-record retail cheat system and an isolated sequence replacement were also traced/tested. [Cheat trace](docs/V0.4-PS2-CHEAT-TRACE-2026-10-22.md).
 
@@ -73,7 +73,7 @@ These are original retail cheat sequences, not evidence of a developer debug men
 
 ## Next steps
 
-Complete v0.4 extracted-package verification, publish the complete tools-only ZIP with checksums, and verify the downloadable release asset. The combined owner console milestone is recorded. [Milestone status](docs/V0.4-ROADMAP.md).
+v0.4 is published with the complete tools-only ZIP, checksums and verification receipt; all three downloaded assets match the local files. The combined owner console milestone is recorded. [Milestone status](docs/V0.4-ROADMAP.md).
 
 Further game research remains focused on documented PS2 features, original cheat behavior and authenticated alternative builds. Broader save/load, character and hardware coverage remains open. Preserve v0.3, originals and the separate working images.
 
