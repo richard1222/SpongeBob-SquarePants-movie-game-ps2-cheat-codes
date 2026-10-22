@@ -1,0 +1,1 @@
+Stage 1: run APPLY-OVERLAY.cmd and select the original USA Movie PS2 ISO. It creates the owner-tested controller debug overlay probe as a separate ISO. Full input/output hashes and original-byte guards are enforced. No game image is included. Use only the exact SLUS_209.04 baseline.
