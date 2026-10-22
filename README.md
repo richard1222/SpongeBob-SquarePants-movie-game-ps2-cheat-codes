@@ -102,6 +102,8 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Tools
 
+**v0.1 bundles the complete toolset:** [overlay](tools/overlay/), [Select toggle](tools/select-toggle/), [custom panel](tools/debug-panel/), [music pause/resume candidate](tools/music-panel/), tests and research utilities. See [release notes and verification status](releases/v0.1/RELEASE_NOTES.md). Music audio behavior remains unverified on hardware.
+
 - **IndustrialPark** — HIP/HOP asset inspection and editing for the Movie console game.
 - **PCSX2** — planned runtime checks for candidate cheats and debug features.
 
