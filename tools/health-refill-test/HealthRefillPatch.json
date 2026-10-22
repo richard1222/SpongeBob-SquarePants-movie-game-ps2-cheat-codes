@@ -1,0 +1,21 @@
+{
+  "input_sha256": "c0494ad78fab34dc19fb52b831facb1b27500e66bf0a57a77e627e7b805096f0",
+  "patches": [
+    {
+      "va": 2959052,
+      "old": "00000000",
+      "new": "1b3c040c",
+      "iso_offset": 877266764,
+      "note": "health callback 0x2D2620: dead nop after the unlockables-refresh loop (0x2D26CC) becomes jal to the heal leaf; $t0/$t1 are dead at this point and the callback restores $ra from its own frame"
+    },
+    {
+      "va": 1110124,
+      "old": "0000000000000000000000000000000000000000",
+      "new": "7b00083c10bc088d6404098d0800e003600409ad",
+      "iso_offset": 875417836,
+      "note": "heal leaf in inter-function padding 0x10F06C (5 zero words after a jr $ra epilogue, unreachable by fall-through; no code or data references): lui/lw player ptr 0x7ABC10, lw max HP +0x464, jr $ra with sw HP=+0x460 in the delay slot - mirrors the retail full-heal at 0x331504"
+    }
+  ],
+  "output_name": "SpongeBob-Movie-USA-HealthRefill-TEST.iso",
+  "output_sha256": "cab04bc299e73f1b261e63e855003a118936468c0e54cd3af36b3fb4e116c304"
+}
