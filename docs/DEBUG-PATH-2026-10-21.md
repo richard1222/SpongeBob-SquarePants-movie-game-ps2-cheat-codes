@@ -60,3 +60,37 @@ No copyrighted ISO or extracted game assets are committed to this repository. Th
 ## Reference
 
 [Movie game decompilation — xDebug DWARF reference](https://github.com/bfbbdecomp/tssm/blob/main/dwarf/SB04_Multi_Sku/Engine/Core/x/xDebug.cpp).
+
+
+## Overlay confirmed; Select-toggle candidate — October 21, 2026
+
+### RR — Really Readable rundown
+
+**Proven owner report:** the owner explicitly clarified **“Controller/status overlay appeared.”** This resolves the earlier ambiguity around “it worked”: the always-on controller-debug display is reported visible on the CFW PS3, not merely a successful boot. No screenshot/video has been supplied.
+
+**Proven static result:** a custom Select-to-toggle candidate replaces only the 64-byte update function at 0x00403BB0. Twenty exact-instruction simulation cases passed. The Windows patcher ran against the known probe ISO, and full-image comparison found **49 differing bytes**, all inside that function window. Wrong-input and existing-output cases were rejected. **Unknown:** runtime behavior of this new toggle, including edge timing across game modes. Full original-menu restoration remains unconfirmed.
+
+### What the patch does
+
+It reads the controller pointer at 0x007AB520, safely returns if null, reads pressed buttons at controller +0x30, and uses Select mask 0x2 to toggle the existing display flag at 0x006378F8. It conditionally tail-calls the original display handler at 0x004A9160. The replacement remains within the original function footprint and does not overwrite the adjacent return-only initializer. Select input is not consumed; its normal game action can still occur.
+
+The stock binary has four direct calls to this update routine (0x002C4DF0, 0x002D39E0, 0x002D4F2C, 0x00300BB4). Their mode-dependent runtime scheduling is not independently verified. The next test must check whether each tap toggles once, including title/menu and gameplay. Static simulation does not prove whole-game scheduling.
+
+### Evidence
+
+- Patcher input: previously tested pad-debug probe, SHA-256 `eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9`.
+- Output candidate: SHA-256 `78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7`.
+- Patch window: ISO byte offset 878,517,296; 64 bytes.
+- Input file and existing outputs are protected; Windows PowerShell creates a separate ISO.
+- 20 cases: null/present pointer, enabled/disabled flag, Select/no Select/other buttons. All passed the emitted-instruction branch-delay simulation.
+- Direct operator invocation generated the candidate successfully; wrong source hash and overwrite attempts failed as expected.
+- Small patcher ZIP: 3,303 bytes; server size and MD5 matched the local upload. No game ISO or assets are bundled.
+- No new hardware run or screenshot is claimed.
+
+The readable ASCII string scan across all seven extracted MN menu HIP/HOP files found cheat sound/group names, but no debug/tweak/developer-menu names. This is not a complete asset-level absence proof: hashed names or code-built UI remain possible.
+
+### Next test
+
+Run the small patcher against the already-downloaded pad-debug probe ISO. Boot the separate output on CFW and tap/release Select twice: check whether the overlay hides and returns, and note normal Select behavior, flicker, or crashes. This is a **custom overlay toggle**, an input-integration experiment toward an interactive interface; it is not the original developer menu.
+
+[Upstream input structure and Select mask](https://github.com/bfbbdecomp/tssm/blob/main/src/SB/Core/x/xPad.h). Actual pointer/load instructions were checked in the retail executable rather than transferring upstream addresses blindly.
