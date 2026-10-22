@@ -1,0 +1,38 @@
+{
+  "instruction_cases": 4992,
+  "pointer_guard_cases": 36,
+  "interaction_steps": 12,
+  "retail_music_instructions_executed": true,
+  "position_scene_and_sound_backend": "external calls modeled; retail position/scene bodies inspected statically",
+  "hardware_tested": false,
+  "source_music_hardware": "owner reported it worked on CFW PS3 on 2026-10-22",
+  "input_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+  "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+  "output_md5": "8ad2dfeb97c11b8251778dcbf35a36d6",
+  "iso_bytes": 1249804288,
+  "different_bytes": 656,
+  "patch_windows": [
+    [
+      878517296,
+      878517360
+    ],
+    [
+      879194816,
+      879195008
+    ],
+    [
+      880619504,
+      880619932
+    ],
+    [
+      879195176,
+      879195240
+    ],
+    [
+      880791698,
+      880791803
+    ]
+  ],
+  "operator_patcher": "Windows PowerShell generated full ISO; wrong input and existing output rejected",
+  "new_menu_hardware_tested": false
+}

@@ -1,4 +1,4 @@
-MUSIC CONTROL — FIRST HARDWARE TEST
+MUSIC CONTROL — OWNER-CONFIRMED BASELINE
 
 1. Extract this ZIP on Windows and run APPLY-MUSIC.cmd.
 2. Choose the working SpongeBob-Movie-USA-Panel-TEST.iso, whose test row worked.
@@ -24,5 +24,5 @@ No game image is included. PowerShell is sufficient; no admin privileges, Python
 Input SHA-256: 9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b
 Output SHA-256: 973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13
 
-Hardware audio test pending. This is a custom panel, not restoration of an original developer menu.
+Owner hardware report, 2026-10-22: "it worked", after pause/resume and sound-effect instructions on the established CFW PS3. This is reported basic success, not proof of extended mode/transition stability. This is a custom panel, not restoration of an original developer menu.
 
