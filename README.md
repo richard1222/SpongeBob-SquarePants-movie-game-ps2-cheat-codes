@@ -85,6 +85,8 @@ These are original retail cheat sequences, not evidence of a developer debug men
 
 ## Next steps
 
+**Active v0.4 milestone plan:** [View the v0.4 roadmap](docs/V0.4-ROADMAP.md). Stable v0.3 is preserved; v0.4 is not a published release. The first original-cheat probe has passed owner-reported PS3 testing, but a combined HealthMenu+cheat build remains untested.
+
 1. Test the separate HealthMenu-TEST: compare HP against ordinary damage and pickups, then check all four controls and transitions. Preserve the owner-reported working DamageMenu-TEST and the three-row fallback.
 2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
 3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
