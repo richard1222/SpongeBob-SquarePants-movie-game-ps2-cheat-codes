@@ -58,3 +58,6 @@ Owner reported progressing into level 2 with the custom debug menu still present
 
 ### Select control hardware update
 Owner confirms the Select button still hides and reopens the custom HealthMenu on PS3 after prior HP and level-transition tests. Music pause/resume remains to be tested separately on this build.
+
+### Existing controls hardware regression update
+Owner explicitly confirmed Select hides and reopens the custom debug menu on the HealthMenu build, and subsequently reported “All options still work.” This is a positive overall hardware report, not individual step-by-step evidence for each diagnostic or audio transition.
