@@ -31,6 +31,8 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
+**Latest — October 22, 2026:** the overlay and Select toggle are confirmed by owner hardware reports. A custom panel with one selectable test row is ready for console testing: **192 instruction cases and a nine-step sequence passed**, but rendering and full-game integration remain unverified. [Panel implementation, patcher, evidence, and test steps](docs/DEBUG-PANEL-2026-10-22.md). This is a custom interface; original developer-menu restoration remains unconfirmed.
+
 | Work | Status |
 | --- | --- |
 | Identify the PS2 USA release | Actual USA disc inspected: SLUS_209.04; executable and source ISO hashed. |
@@ -41,7 +43,7 @@ Free camera and level selection are outside the current requested scope. This is
 | Obtain the working ISO | Actual Movie USA ISO found locally and inspected on October 21, 2026. |
 | Inspect executable and assets | Executable and INI inspected; retained debug-display path traced. Menu asset investigation continues. |
 | Enable and test a PS2 debug menu | Not achieved; no working PS2 debug-menu patch is claimed. |
-| Release cheats or patches | No project-tested patch or release yet. |
+| Patches | Owner-tested overlay/Select toggle; custom panel patcher published for hardware testing. |
 
 ## Prototype findings
 
@@ -73,7 +75,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Next steps
 
-1. Test the minimal controller-debug probe on the owner's CFW PS3 and record its visible output.
+1. Test the custom panel candidate on the owner's CFW PS3: selection, OFF/ON display, and Select hide/show.
 2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
 3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
 4. Inspect HIP/HOP assets for unused UI and development content; compare relevant prototypes where useful.
@@ -94,7 +96,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 | Working ISO access | ✅ Inspected | USA ISO, executable and INI verified locally |
 | Executable and asset inspection | 🔄 In progress | Retained debug path traced; full menu investigation pending |
 | Debug menu activation | ⏳ Pending | No working patch verified |
-| PCSX2 / hardware validation | ⏳ Pending | No candidate patch ready for testing |
+| Hardware validation | 🔄 In progress | Overlay and Select toggle owner-confirmed; custom panel console test pending |
 
 **Legend:** ✅ Documented or defined · 🔄 In progress · ⏳ Pending
 
@@ -103,7 +105,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 - **IndustrialPark** — HIP/HOP asset inspection and editing for the Movie console game.
 - **PCSX2** — planned runtime checks for candidate cheats and debug features.
 
-No project-specific patching script has been released yet.
+The [custom panel patcher](tools/debug-panel/) is published with input/overwrite guards, a verification receipt, and an instruction-level test runner. Its console behavior is not yet confirmed.
 
 ---
 
