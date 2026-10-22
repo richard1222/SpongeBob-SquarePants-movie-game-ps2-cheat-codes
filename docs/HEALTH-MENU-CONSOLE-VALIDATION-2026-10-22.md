@@ -25,7 +25,7 @@ See [the original implementation evidence](HEALTH-MENU-2026-10-22.md). Keep the 
 | H03 | With Damage 1, take one ordinary enemy hit | HP decreases in step with game health | PASS — owner reported HP3 → HP1 after 2 hits, 2 hamburgers lost; toggle state not independently recorded |
 | H04 | Collect an ordinary health pickup | HP increases or otherwise matches observed game health behavior | PASS — owner reported recovery to 2 hamburgers and HP2; pickup type not explicitly reported |
 | H05 | Switch to Damage 0; take comparable ordinary hit | Existing damage-off behavior remains and HP reflects actual value | PARTIAL PASS — owner confirms ordinary hit does no damage; HP value during this specific hit not separately stated |
-| H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PENDING |
+| H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PARTIAL PASS — owner confirms one hamburger lost after restoring Damage 1; HP value for this hit not separately reported |
 | H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PENDING |
 | H08 | Pass through loading, level transition, and player-character transition if available | No crash, stale value, or bogus pointer-read display | PENDING |
 | H09 | Die/restart and reopen menu | No freeze; HP reflects new player state | PENDING |
@@ -46,3 +46,6 @@ On PS3, owner reported initial `HP3`, followed by `HP1` after two hits and loss 
 
 ### Damage toggle hardware update
 Owner clarified that an earlier death occurred with `Damage 1` (not `Damage 0`), so it is not evidence of a damage-off failure. Owner subsequently tested `Damage 0` and reports taking no damage from an ordinary enemy hit. Exact HP readout during this toggle-specific hit, and re-enabling `Damage 1`, remain to be checked.
+
+### Damage re-enable hardware update
+Owner reports that after changing back from `Damage 0` to `Damage 1`, an ordinary enemy hit again removes one hamburger. This verifies that the toggle can restore normal damage behavior on the tested PS3 build. The HP counter value during this particular hit was not captured separately.
