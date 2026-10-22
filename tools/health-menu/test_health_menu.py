@@ -1,5 +1,8 @@
 from pathlib import Path
 import struct,json,itertools,hashlib,argparse
+# Assertions enforce test correctness; optimized Python removes them.
+if not __debug__:
+    raise RuntimeError('Run tests without Python optimization (-O / PYTHONOPTIMIZE).')
 parser=argparse.ArgumentParser(description='Emitted-instruction checks for the live health display.')
 parser.add_argument('elf',type=Path)
 args=parser.parse_args()
