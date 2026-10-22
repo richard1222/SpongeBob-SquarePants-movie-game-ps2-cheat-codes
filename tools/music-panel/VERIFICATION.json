@@ -23,6 +23,12 @@
   "sound_backend": "modeled, not executed",
   "operator_patcher": "generated full ISO",
   "guards": "wrong input and existing output rejected",
-  "hardware_tested": false,
-  "scope": "custom row pauses/resumes existing music handles; does not alter saved volume or INI NoMusic flag"
+  "hardware_tested": true,
+  "scope": "custom row pauses/resumes existing music handles; does not alter saved volume or INI NoMusic flag",
+  "hardware_evidence": {
+    "type": "owner_report",
+    "date": "2026-10-22",
+    "report": "it worked",
+    "context": "Owner tested the GoFile Music-TEST.iso following pause/resume and sound-effect instructions; no console capture or extended transition results supplied."
+  }
 }
