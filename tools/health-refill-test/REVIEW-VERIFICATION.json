@@ -7,12 +7,22 @@
   "source_commit": "acb9ce961948bd70e1396d4df53322c044f23fd1",
   "candidate_iso_sha256": "cab04bc299e73f1b261e63e855003a118936468c0e54cd3af36b3fb4e116c304",
   "candidate_elf_sha256": "1175a8d7650a7c2a01cb76a955e23f00a73a8847f0d88f277ab6c0547a30b492",
-  "hardware_tested": false,
+  "hardware_tested": true,
   "game_patch_bytes_changed": false,
   "full_seven_iso_stages_rerun": false,
   "docs_corrected": [
     "UI flow string address/name",
     "UI equality condition",
     "fallback UI state byte index"
-  ]
+  ],
+  "initial_hardware_tested": false,
+  "owner_hardware_report": {
+    "date": "2026-10-22",
+    "source": "owner report in this chat",
+    "quote": "it worked i got 6",
+    "environment": "established CFW PS3 CECH-2001A setup",
+    "scope": "Basic reported success and a result of six after the supplied HealthRefill-TEST instructions; detailed pre/post HP and extended coverage not separately recorded.",
+    "supplied_iso_sha256": "cab04bc299e73f1b261e63e855003a118936468c0e54cd3af36b3fb4e116c304",
+    "console_copy_hash_independently_rechecked": false
+  }
 }

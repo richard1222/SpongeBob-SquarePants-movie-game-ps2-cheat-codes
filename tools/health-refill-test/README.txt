@@ -15,8 +15,9 @@ fields of the player struct reached via the pointer at 0x007ABC10:
 current HP at +0x460, max HP at +0x464).
 
 STATUS: designed and validated on Neptune (build, byte-diff audit,
-extracted-ELF disassembly round-trip, full repo regression). NOT yet run
-on hardware. Do not treat as working until the owner test below is done.
+extracted-ELF disassembly round-trip, full repo regression). Owner subsequently
+reported: "it worked i got 6" on 2026-10-22, established CFW PS3 setup.
+This confirms basic reported success; extended coverage remains unverified.
 
 THE PATCH (2 sites, 6 words, fully reversible)
 ----------------------------------------------
@@ -60,7 +61,7 @@ KNOWN BOUNDARIES (from the trace, stated honestly)
   amount (3 vs 6) will show whether the max syncs from the slot words
   immediately or only at spawn/level load.
 
-OWNER HARDWARE TEST (for later, on approval - not part of the Neptune run)
+OWNER HARDWARE TEST (basic success now reported; protocol retained)
 --------------------------------------------------------------------------
 1. Mount SpongeBob-Movie-USA-HealthRefill-TEST.iso.
 2. Enter a level, take damage so HP is below max (e.g. 1 or 2 HP).
@@ -84,9 +85,15 @@ The existing ISO hash and its extracted executable match the tested bytes.
 The callback's UI tail refers to PAUSESTATE MENU OR POWERUP COUNTER at
 0x61FEC4 and calls the UI function when the found object's state EQUALS 2.
 Earlier HP-confirm string and inverted-state descriptions were incorrect.
-No candidate ISO bytes changed. Hardware testing is still pending.
+No candidate ISO bytes changed. The owner subsequently reported it worked and
+produced six; broader hazard, character and transition coverage remains open.
 
 Python 3.11+, standard library, no -O:
 python test_health_refill.py "path/to/original/SLUS_209.04" --patched-iso "path/to/HealthRefill-TEST.iso"
 Hash/object/UI function bodies are modeled. This does not run the game renderer
 or establish live pointer safety. See docs/V0.4-HEALTH-REFILL-REVIEW-2026-10-22.md.
+
+OWNER RESULT - 2026-10-22
+Exact report after the supplied refill test: "it worked i got 6".
+Keep this isolated candidate and stable v0.3 as separate baselines. A combined
+HealthMenu-plus-refill build has not been tested or released.
