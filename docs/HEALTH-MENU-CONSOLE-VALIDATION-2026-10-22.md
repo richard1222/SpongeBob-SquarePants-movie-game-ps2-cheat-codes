@@ -28,7 +28,7 @@ See [the original implementation evidence](HEALTH-MENU-2026-10-22.md). Keep the 
 | H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PARTIAL PASS — owner confirms one hamburger lost after restoring Damage 1; HP value for this hit not separately reported |
 | H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PENDING |
 | H08 | Pass through loading, level transition, and player-character transition if available | No crash, stale value, or bogus pointer-read display | PENDING |
-| H09 | Die/restart and reopen menu | No freeze; HP reflects new player state | PENDING |
+| H09 | Die/restart and reopen menu | No freeze; HP reflects new player state | PASS (owner report) — game reloaded normally, HP3 displayed, matching three hamburgers |
 | H10 | Return to title and reload a level | Menu and HP behave correctly after reinitialization | PENDING |
 
 For each failure, record **test ID, image identifier/hash, area and character, action sequence, expected/actual HP, whether the HUD changed, and whether the console froze**. A screenshot or short video is useful when available but not required.
@@ -49,3 +49,6 @@ Owner clarified that an earlier death occurred with `Damage 1` (not `Damage 0`),
 
 ### Damage re-enable hardware update
 Owner reports that after changing back from `Damage 0` to `Damage 1`, an ordinary enemy hit again removes one hamburger. This verifies that the toggle can restore normal damage behavior on the tested PS3 build. The HP counter value during this particular hit was not captured separately.
+
+### Reload / restart hardware update
+After the earlier gameplay death and subsequent tests, owner reports the game reloaded fine and the custom menu read `HP3`, matching three hamburger health units. This supports the restart/lifecycle check; character switching and separate title-to-level transitions remain untested.
