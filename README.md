@@ -136,3 +136,8 @@ The owner reports that the controller-debug probe **worked** in the CFW PS3 test
 ### Visible overlay confirmed; interactive-toggle experiment
 
 The owner explicitly confirms that the **controller/status overlay appeared** on the CFW PS3. The always-on display is therefore hardware-confirmed by owner report. A separate **custom Select-toggle candidate** now passes 20 instruction-level cases, full-ISO change-boundary verification, and patcher input/overwrite guards; **its console behavior is not yet tested**. Full original developer-menu restoration remains unconfirmed. [Evidence and next test](docs/DEBUG-PATH-2026-10-21.md#overlay-confirmed-select-toggle-candidate--october-21-2026).
+
+
+### Select overlay toggle — hardware-confirmed by owner report
+
+After testing the supplied toggle ISO and Select hide/show instructions, the owner reported **“it worked.”** Both the controller/status overlay and its custom Select on/off control are now confirmed by owner report on the established CFW PS3 setup. This confirms the basic reported interaction, not all game modes or extended stability. **Full original developer-menu restoration remains unconfirmed.** [Hardware test receipt](docs/DEBUG-PATH-2026-10-21.md#select-toggle-hardware-report--october-21-2026).
