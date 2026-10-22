@@ -1,7 +1,7 @@
 {
   "stage": "cheat-seq-test",
   "purpose": "v0.4 research probe: verify the traced retail cheat-input handler (zGameCheatsUpdate at 0x002D2740) and cheatList record layout by changing one entry-sequence word in data only. No code bytes change.",
-  "hardware_tested": false,
+  "hardware_tested": true,
   "input_sha256": "c0494ad78fab34dc19fb52b831facb1b27500e66bf0a57a77e627e7b805096f0",
   "output_sha256": "f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac",
   "output_md5": "646f9fee14890478398193528251b18e",
@@ -22,5 +22,6 @@
   "flag_bit": "0x10000000",
   "save_persistence": "none: zGameExtras_Save at 0x002D2AB0 writes flags & 0xFFFF only, so bit 0x10000000 is never persisted",
   "patcher_guards": "wrong source and existing output rejected; Windows PowerShell produced verified ISO",
-  "built_on": "Neptune, 2026-10-22"
+  "built_on": "Neptune, 2026-10-22",
+  "owner_test": "2026-10-22: PASS on owner CFW PS3 (ps2_netemu). Owner report: the new sequence worked and the cheat sound played, using the verified entry method (pause, hold L1+L2+R1+R2). ISO SHA-256 verified on the console copy before mounting."
 }
