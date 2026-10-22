@@ -1,7 +1,8 @@
 ![Platform](https://img.shields.io/badge/Platform-PS2-blue)
 ![Region](https://img.shields.io/badge/Target_Region-USA-green)
 ![Serial](https://img.shields.io/badge/Target_Serial-SLUS__209.04-orange)
-![Status](https://img.shields.io/badge/Status-Working_PS3_Build-blue)
+![Stable](https://img.shields.io/badge/Stable-v0.3-blue)
+![Development](https://img.shields.io/badge/Development-v0.4-orange)
 
 # The SpongeBob SquarePants Movie (PS2) — cheats and debug research
 
@@ -32,6 +33,10 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
+**Stable release:** [v0.3](https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/tag/v0.3) — owner-tested custom HealthMenu for CFW PS3 Slim `ps2_netemu`, with all seven tested cumulative patcher stages. **Active development: v0.4**, investigating the *original* Heavy Iron retail cheat system. This does **not** indicate a published v0.4 release. [v0.4 milestone and release gates](releases/v0.4/DEVELOPMENT_STATUS.md).
+
+**v0.4 first hardware milestone — October 22, 2026:** Muse traced `zGameCheatsUpdate` at PS2 retail address `0x002D2740` and confirmed a nine-record cheat table. A separate one-data-byte `CheatSeq-TEST` ISO replaced the Patrick Caveman code with **Square ×6, Circle ×2**. On PS3 Slim, the owner reported success sound for the new sequence and no success for the replaced original sequence; Muse verified the mounted ISO's SHA-256 `f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac`. **Correct entry:** start a level, pause with START, hold all four shoulder buttons L1+L2+R1+R2, then press the Square/Circle sequence. The initial *Triangle* instructions were incorrect. This probe uses the **original retail ISO**, not a combined HealthMenu+cheat build. [PS2 instruction-level trace](docs/V0.4-PS2-CHEAT-TRACE-2026-10-22.md) · [Probe and verification](tools/cheat-seq-test/).
+
 **Current owner-tested candidate — October 22, 2026:** a separate **live HP display** adds the current health integer beside row 4's Damage toggle. It passed 6,656 menu instruction cases, 36 existing pointer-guard cases and 41 health-readout cases. **PS3 hardware checks now confirm** HP3→HP1 after two hits, HP2 after recovery, Damage 0 protection, restoration of damage with Damage 1, HP3 after restart and after reaching level 2, and owner-reported continued operation of the existing controls. These are owner reports, not independently captured traces; other PS2 hardware and emulators remain untested. [Console results](docs/HEALTH-MENU-CONSOLE-VALIDATION-2026-10-22.md). [HP patcher and tests](tools/health-menu/) · [Retail evidence and checks](docs/HEALTH-MENU-2026-10-22.md).
 
 **Working baseline — October 22, 2026:** a separate **four-row damage-menu test** adds a reversible retail damage-flag control at 0x007ABB20. It passed 6,656 menu instruction cases, 36 pointer-guard cases and 96 focused retail health-decrement cases; the full ISO differs by 388 bytes within the intended windows. **Owner report: “it works fine” on the established CFW PS3 setup.** This confirms basic reported success; separate damage-off/damage-on observations and broader hazard/transition coverage were not described. [Patcher and tests](tools/damage-menu/) · [Retail evidence and test instructions](docs/DAMAGE-MENU-2026-10-22.md). The owner-tested three-row menu is preserved as the fallback.
@@ -41,7 +46,7 @@ Free camera and level selection are outside the current requested scope. This is
 | Work | Status |
 | --- | --- |
 | Identify the PS2 USA release | Actual USA disc inspected: SLUS_209.04; executable and source ISO hashed. |
-| Research existing controller cheats | Published PS2 button sequences located; not yet tested by this project. |
+| Research existing controller cheats | Original cheat input traced; modified Patrick Caveman sequence owner-tested successfully on PS3 in isolated v0.4 probe. |
 | Search prototype sources | Hidden Palace, Internet Archive metadata, auction records, and indexed forum results searched. |
 | Verify an actual PS2 prototype | An August 31, 2004 test disc is documented by Heritage Auctions. No verified public dump located in this search. |
 | Check Wayback Machine | Targeted ASSEMblergames CDX request returned HTTP 503. Archived forum coverage remains incomplete. |
@@ -61,7 +66,7 @@ No verified publicly downloadable PS2 prototype was found in the searches comple
 
 ## PS2 button cheats
 
-**Status: published sequences located; local testing pending.**
+**Status: original cheat handler traced; one isolated sequence replacement owner-tested successfully on PS3 (v0.4 development).**
 
 Source: [GameFAQs PS2 cheats](https://gamefaqs.gamespot.com/ps2/920196-the-spongebob-squarepants-movie/cheats).
 
@@ -76,7 +81,7 @@ Pause the game and hold **L1 + L2 + R1 + R2** while entering a sequence.
 | Caveman SpongeBob | Square, Square, Square, Square, Circle, Square, Square, Square |
 | Goofy Goober Patrick | Square, Square, Square, Square, Circle, Square, Circle, Square |
 
-These are published cheat sequences, not evidence of a developer debug menu. Record region and observed behavior when testing.
+These are original retail cheat sequences, not evidence of a developer debug menu. **On the isolated v0.4 CheatSeq-TEST ISO only**, Patrick Caveman's original `Square ×4, Circle, Square, Circle ×2` is replaced by `Square ×6, Circle ×2`. This does not modify the v0.3 release. Record region and observed behavior when testing.
 
 ## Next steps
 
@@ -97,7 +102,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 | PS2 prototype identification | ✅ Documented | August 31, 2004 test disc auction record |
 | Public PS2 prototype search | 🔄 In progress | No verified public dump located so far |
 | Forum and Wayback research | 🔄 In progress | Archive coverage incomplete; CDX request returned HTTP 503 |
-| Controller cheat verification | ⏳ Pending | Published sequences collected; not tested here |
+| Controller cheat verification | ✅ First isolated v0.4 probe passed | Owner reported modified Square/Circle cheat successful on PS3; not integrated into v0.3 |
 | Working ISO access | ✅ Inspected | USA ISO, executable and INI verified locally |
 | Executable and asset inspection | 🔄 In progress | Retained debug path traced; full menu investigation pending |
 | Original developer-menu activation | ⏳ Pending | Custom panel works by owner report; original menu not recovered |
@@ -107,9 +112,9 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Tools
 
-**v0.2 complete toolset:** [release notes](releases/v0.2/RELEASE_NOTES.md) · [all seven stages and quick start](tools/README.md). The update fixes hashing compatibility and incomplete output handling, adds manifest checks and includes the new experimental HP readout. v0.1 remains available unchanged.
+**Historical v0.2 toolset:** [release notes](releases/v0.2/RELEASE_NOTES.md) · [all seven stages and quick start](tools/README.md). The update fixes hashing compatibility and incomplete output handling, adds manifest checks and includes the new experimental HP readout. v0.1 remains available unchanged.
 
-**Newest candidate:** [live HP patcher](tools/health-menu/) — adds the current health number beside Damage. Console test pending.
+**Stable v0.3 baseline:** [live HP patcher](tools/health-menu/) — adds the current health number beside Damage; owner-reported console tests passed. **v0.4 research probe:** [original cheat-sequence replacement](tools/cheat-seq-test/) owner-tested separately on PS3; not yet integrated into HealthMenu.
 
 **Owner-tested damage baseline:** [four-row damage-menu patcher](tools/damage-menu/) adds Damage 1/0 to the existing controls; the owner reports this build works fine on the established CFW PS3 setup; detailed hazard and transition coverage remains open. [Build and retail-code evidence](docs/DAMAGE-MENU-2026-10-22.md).
 
