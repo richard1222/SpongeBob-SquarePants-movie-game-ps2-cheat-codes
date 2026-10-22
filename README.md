@@ -123,6 +123,11 @@ Keep platform, region, and verification status attached to each finding. Publish
 
 ## Debug-path milestone — October 21, 2026
 
-**Proven:** the actual USA PS2 image has been inspected. `displayPadDebugInfo` is parsed and gates a retained handler; a local diagnostic ISO enables it with exactly **40 changed bytes**, all in one INI comment line, leaving executable code untouched. **Unknown:** visible output and complete debug-menu restoration. `ShowMenuOnBoot=1` was already stock and is not a debug unlock. The controller-debug probe awaits the owner's hardware test.
+**Proven:** the actual USA PS2 image has been inspected. `displayPadDebugInfo` is parsed and gates a retained handler; a local diagnostic ISO enables it with exactly **40 changed bytes**, all in one INI comment line, leaving executable code untouched. **Unknown:** visible output and complete debug-menu restoration. `ShowMenuOnBoot=1` was already stock and is not a debug unlock. The owner subsequently reported **“it worked”** on the established CFW PS3 setup. The exact visible overlay behavior remains unspecified; this is not confirmation of a complete debug menu.
 
 [Read the full evidence, addresses, hashes, limitations, and test steps](docs/DEBUG-PATH-2026-10-21.md).
+
+
+### Hardware report — October 21, 2026
+
+The owner reports that the controller-debug probe **worked** in the CFW PS3 testing context. This records the owner's result; a screenshot or detailed description is still needed to distinguish successful boot from visible debug output. **Full developer-menu restoration remains unconfirmed.** [Hardware report and evidence](docs/DEBUG-PATH-2026-10-21.md#owner-hardware-report--october-21-2026).
