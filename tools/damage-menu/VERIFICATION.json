@@ -1,0 +1,42 @@
+{
+  "instruction_cases": 6656,
+  "pointer_guard_cases": 36,
+  "interaction_steps": 12,
+  "retail_music_instructions_executed": true,
+  "position_scene_and_sound_backend": "external calls modeled; retail position/scene bodies inspected statically",
+  "hardware_tested": false,
+  "damage_flag_hardware_tested": false,
+  "source_music_hardware": "owner reported it worked on CFW PS3 on 2026-10-22",
+  "input_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+  "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+  "output_md5": "5bb8149862a63187f93eecf1f2ebf5d0",
+  "iso_bytes": 1249804288,
+  "different_bytes": 388,
+  "patch_windows": [
+    [
+      878517296,
+      878517360
+    ],
+    [
+      879194816,
+      879195008
+    ],
+    [
+      880619504,
+      880619932
+    ],
+    [
+      879195176,
+      879195240
+    ],
+    [
+      880791698,
+      880791803
+    ]
+  ],
+  "damage_address": "0x007ABB20",
+  "initial_value_write": "0x0046BA98",
+  "patcher_guards": "wrong source and existing output rejected; Windows PowerShell produced verified ISO",
+  "retail_damage_subtraction_cases": 96,
+  "retail_damage_scope": "actual instructions 0x32b774 through health write at 0x32baec; other paths untested"
+}

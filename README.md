@@ -31,7 +31,9 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
-**Latest — October 22, 2026:** the owner reports that the real music pause/resume test **worked** on the CFW PS3. A new **three-row custom debug-menu ISO** now adds guarded XYZ and scene/controller diagnostics while retaining that music control and Select hide/show. It passes 4,992 instruction cases, 36 pointer-guard cases, a 12-step sequence, and a full-image comparison showing 656 changed bytes in five intended windows. **The owner subsequently reported “it worked fine” for the expanded menu on the established CFW PS3 setup.** This records basic reported success; individual feature and transition coverage were not separately described. [Tools and controls](tools/debug-menu/) · [Implementation, hashes and first-console-test receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This remains a custom interface; original developer-menu restoration is unconfirmed.
+**Newest candidate — October 22, 2026:** a separate **four-row damage-menu test** adds a reversible retail damage-flag control at 0x007ABB20. It passed 6,656 menu instruction cases, 36 pointer-guard cases and 96 focused retail health-decrement cases; the full ISO differs by 388 bytes within the intended windows. **Console testing is pending.** [Patcher and tests](tools/damage-menu/) · [Retail evidence and test instructions](docs/DAMAGE-MENU-2026-10-22.md). The owner-tested three-row menu is preserved as the fallback.
+
+**Previous milestone — October 22, 2026:** the owner reports that the real music pause/resume test **worked** on the CFW PS3. A new **three-row custom debug-menu ISO** now adds guarded XYZ and scene/controller diagnostics while retaining that music control and Select hide/show. It passes 4,992 instruction cases, 36 pointer-guard cases, a 12-step sequence, and a full-image comparison showing 656 changed bytes in five intended windows. **The owner subsequently reported “it worked fine” for the expanded menu on the established CFW PS3 setup.** This records basic reported success; individual feature and transition coverage were not separately described. [Tools and controls](tools/debug-menu/) · [Implementation, hashes and first-console-test receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This remains a custom interface; original developer-menu restoration is unconfirmed.
 
 | Work | Status |
 | --- | --- |
@@ -75,7 +77,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Next steps
 
-1. Preserve the owner-tested expanded DebugMenu-TEST baseline. Record detailed XYZ/scene/controller behavior and transition coverage before expanding the menu further.
+1. Test the separate four-row DamageMenu-TEST: compare the same enemy hit at Damage 1, then 0, then 1 again. Record the display change, damage prevention and restoration separately. Preserve the owner-tested three-row DebugMenu-TEST baseline.
 2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
 3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
 4. Inspect HIP/HOP assets for unused UI and development content; compare relevant prototypes where useful.
@@ -102,7 +104,9 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Tools
 
-**Newest candidate:** [expanded debug-menu patcher](tools/debug-menu/) — three selectable rows for music, guarded XYZ, and scene/controller diagnostics. Use the matching Music-TEST input. [Build and verification receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). The owner reports this build worked fine on the CFW PS3; extended testing remains open.
+**Newest candidate:** [four-row damage-menu patcher](tools/damage-menu/) adds Damage 1/0 to the existing controls; console behavior is unverified. [Build and retail-code evidence](docs/DAMAGE-MENU-2026-10-22.md).
+
+**Owner-tested baseline:** [expanded debug-menu patcher](tools/debug-menu/) — three selectable rows for music, guarded XYZ, and scene/controller diagnostics. Use the matching Music-TEST input. [Build and verification receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). The owner reports this build worked fine on the CFW PS3; extended testing remains open.
 
 **v0.1 bundles the complete toolset:** [overlay](tools/overlay/), [Select toggle](tools/select-toggle/), [custom panel](tools/debug-panel/), [music pause/resume candidate](tools/music-panel/), tests and research utilities. See [release notes and verification status](releases/v0.1/RELEASE_NOTES.md). Music audio behavior is now confirmed by owner report; extended mode/transition behavior remains unverified.
 
