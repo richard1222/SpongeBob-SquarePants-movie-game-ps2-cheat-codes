@@ -94,3 +94,16 @@ The readable ASCII string scan across all seven extracted MN menu HIP/HOP files 
 Run the small patcher against the already-downloaded pad-debug probe ISO. Boot the separate output on CFW and tap/release Select twice: check whether the overlay hides and returns, and note normal Select behavior, flicker, or crashes. This is a **custom overlay toggle**, an input-integration experiment toward an interactive interface; it is not the original developer menu.
 
 [Upstream input structure and Select mask](https://github.com/bfbbdecomp/tssm/blob/main/src/SB/Core/x/xPad.h). Actual pointer/load instructions were checked in the retail executable rather than transferring upstream addresses blindly.
+
+
+## Select toggle hardware report — October 21, 2026
+
+**Proven owner report:** after receiving the toggle ISO instructions—tap Select to hide the controller overlay, then tap again to restore it—the owner reported **“it worked.”** The custom Select-toggle candidate is now **hardware-confirmed by owner report** in the established CECH-2001A CFW PS3 context. The always-on overlay had already been separately confirmed.
+
+In plain language, the existing controller-debug display now has a user-tested on/off control. This validates the reported basic interaction of the tested candidate; it does not restore or confirm the original developer menu.
+
+Tested candidate SHA-256: `78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7` (build identity from the supplied candidate; no fresh console-side hash was provided). The prior static evidence remains 20 instruction-level cases and a full-ISO comparison showing 49 differing bytes confined to the 64-byte function window.
+
+**Unknown:** no screenshot/video, duration, separate title-screen versus gameplay results, save/load check, or extended stability report has been supplied. Do not interpret the short success report as proof of every game mode or long-term stability. Earlier “untested toggle” statements describe the pre-test stage and are superseded by this report.
+
+**Next:** retain the working overlay/toggle as the baseline and investigate additional interactive debug controls separately. Full original developer-menu restoration remains unconfirmed.
