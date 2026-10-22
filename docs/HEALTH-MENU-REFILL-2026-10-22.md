@@ -6,7 +6,7 @@
 
 ## Rundown
 
-**Proven locally:** the combined candidate is built and passes the instruction and patcher checks below. **Unknown:** its behavior on the PS3; that test is next. Stable v0.3 and both separate test images are preserved. This is a v0.4 development candidate, not a published v0.4 release.
+**Proven locally:** the combined candidate is built and passes the instruction and patcher checks below. **Owner-reported PS3 result:** “everything worked in order no issues.” The supplied ordered test is reported successful; exact post-cheat HP and extended coverage were not separately recorded. Stable v0.3 and both separate test images are preserved. This is a v0.4 development candidate, not a published v0.4 release.
 
 The four existing menu rows remain available. Refill uses the original paused shoulder-button cheat; it is not a new row. The build adds the same two-site refill patch to the stable HealthMenu image. No other ISO bytes change. The callback retains the original pause-counter check and power-up group refresh identified in the [menu research](PS2-MENU-CROSS-PLATFORM-2026-10-22.md).
 
@@ -28,7 +28,7 @@ The separate tools-only incremental ZIP is 6,631 bytes, SHA-256 `f5b9e7fcf00ba35
 | Proven | Damage-decrement checks. | 96 cases; tested retail instruction windows are unchanged in the combined executable. |
 | Proven | New combined patcher fixture checks. | 14 cases pass, including wrong source, overlap, bounds, original-byte guard, final-hash failure cleanup, existing-output preservation and missing Get-FileHash. Eight wrapped-message tests pass. |
 | Inference | These checks support compatibility of the unchanged patches. | External rendering, sound, hash lookup, scene lookup and event handlers are modeled rather than running the complete game. |
-| Unknown | Combined console behavior. | No combined PS3 test has occurred yet. Prior separate-build owner reports are not evidence that this combined image has passed. |
+| Recorded owner report | Combined test completed in order without issues. | Exact report: “everything worked in order no issues.” No independent console capture; exact final HP and extended coverage not separately recorded. |
 
 This is byte/instruction verification; no new gameplay screenshot or emulator boot was produced.
 
@@ -52,6 +52,10 @@ No game data belongs in the tools repository or patcher ZIP. The incremental pat
 4. Release the shoulders and resume. Record the menu HP and normal health HUD. The added action refills to the current struct maximum; the original cheat grants six slots. The isolated candidate was reported to produce six. If this combined build shows HP3 with six slots, record the discrepancy rather than declaring complete success.
 5. Check Damage 0 protection, restore Damage 1, take a hit and reenter the cheat. Check one restart/level transition and menu hide/show.
 
-Use a spare save or avoid saving during this test because the original slot upgrade can persist. Preserve the stable image. Unknowns include live maximum synchronization, other hazards/characters, save/load and prolonged transitions. A v0.4 release requires the combined hardware result and separate release packaging/verification.
+Use a spare save or avoid saving during this test because the original slot upgrade can persist. Preserve the stable image. Unknowns include live maximum synchronization, other hazards/characters, save/load and prolonged transitions. The owner has now reported the combined test successful. A v0.4 release still requires separate release packaging/verification.
 
 Reproduction commands and detailed controls are in [the incremental patcher README](../tools/health-menu-refill/README.txt); the machine-readable test receipt is [VERIFICATION.json](../tools/health-menu-refill/VERIFICATION.json).
+
+## Owner console result received after the build
+
+The owner reports **“everything worked in order no issues”** after the supplied sequence. The earlier HP3 message was explicitly clarified as starting health, not a failed refill result. [Full owner-result receipt and limits](HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md). No patch bytes changed; this remains a v0.4 development candidate until release publication.

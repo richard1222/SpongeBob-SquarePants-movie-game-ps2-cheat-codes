@@ -33,7 +33,7 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
-**Combined test candidate now available:** HealthMenu plus the original six-slot cheat refill, SHA-256 `8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883`. Local instruction, interaction and patcher checks pass; **combined PS3 testing is pending**. [Download and test instructions](docs/HEALTH-MENU-REFILL-2026-10-22.md) · [Incremental patcher](tools/health-menu-refill/). Stable v0.3 is preserved; v0.4 is still development only.
+**Combined candidate owner-tested:** HealthMenu plus the original six-slot cheat refill, SHA-256 `8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883`. Local instruction, interaction and patcher checks pass; **the owner now reports “everything worked in order no issues” on the established CFW PS3 setup**. [Console report](docs/HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md) · [Download and test instructions](docs/HEALTH-MENU-REFILL-2026-10-22.md) · [Incremental patcher](tools/health-menu-refill/). Stable v0.3 is preserved; v0.4 is still development only.
 
 **New menu evidence:** GameCube structure/event references checked against the actual PS2 menu archive identify the health cheat's pause counter and its separate 11-member power-up refresh group. [Findings, pinned sources and reproduction](docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md). Xbox documentation reviewed; no Xbox executable comparison or new game patch in this pass.
 

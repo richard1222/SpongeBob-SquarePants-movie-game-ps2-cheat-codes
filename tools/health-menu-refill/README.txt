@@ -4,7 +4,7 @@ USA SLUS_209.04 - v0.4 development candidate, not a published v0.4 release.
 WHAT THIS COMBINES
 The owner-tested four-row HealthMenu and the separately owner-tested retail
 six-slot cheat refill. There is no new menu row: refill uses the original
-retail cheat sequence below. The combined image has not been tested on PS3 yet.
+retail cheat sequence below. The owner now reports: "everything worked in order no issues" on the established CFW PS3 setup (2026-10-22). Exact final HP was not separately reported.
 
 BUILD
 Input: SpongeBob-Movie-USA-HealthMenu-TEST.iso (stable v0.3 output), SHA-256
@@ -62,3 +62,9 @@ powershell.exe -NoProfile -ExecutionPolicy Bypass -File Apply-HealthMenuRefill.p
 The patcher writes a unique temporary .partial file and publishes its final
 name only after the expected hash passes. Handled failures remove the partial
 file; a killed process or power loss may leave an incomplete .partial file.
+
+OWNER CONSOLE RESULT - 2026-10-22
+The earlier HP3 message described starting health, not a failed refill.
+After the supplied sequence, the owner reported "everything worked in order
+no issues". Basic combined success is recorded. Extended coverage and exact
+post-cheat HP were not separately captured. This is not a published v0.4 release.
