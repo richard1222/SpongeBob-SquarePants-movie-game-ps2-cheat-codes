@@ -2,6 +2,11 @@
 from pathlib import Path
 import argparse, hashlib, json, shutil, subprocess, tempfile
 
+# This regression harness uses assertions for its safety checks. Under python -O
+# they are stripped, so refuse to run rather than print a misleading PASS.
+if not __debug__:
+    raise RuntimeError('Run regression tests without Python optimization (-O / PYTHONOPTIMIZE).')
+
 def sha(path):
     with path.open('rb') as f:
         return hashlib.file_digest(f, 'sha256').hexdigest()
