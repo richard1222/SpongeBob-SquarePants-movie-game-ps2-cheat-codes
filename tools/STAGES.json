@@ -1,0 +1,65 @@
+[
+  {
+    "folder": "overlay",
+    "script": "Apply-Overlay.ps1",
+    "manifest": "OverlayPatch.json",
+    "input_name": "Nickelodeon SpongeBob SquarePants - The Movie (USA).iso",
+    "output_name": "SpongeBob-Movie-USA-Pad-Debug-PROBE.iso",
+    "input_sha256": "c0494ad78fab34dc19fb52b831facb1b27500e66bf0a57a77e627e7b805096f0",
+    "output_sha256": "eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9"
+  },
+  {
+    "folder": "select-toggle",
+    "script": "Apply-Select-Toggle.ps1",
+    "manifest": "SelectTogglePatch.json",
+    "input_name": "SpongeBob-Movie-USA-Pad-Debug-PROBE.iso",
+    "output_name": "SpongeBob-Movie-USA-Select-Toggle-TEST.iso",
+    "input_sha256": "eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9",
+    "output_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7"
+  },
+  {
+    "folder": "debug-panel",
+    "script": "Apply-Panel.ps1",
+    "manifest": "PanelPatch.json",
+    "input_name": "SpongeBob-Movie-USA-Select-Toggle-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-Panel-TEST.iso",
+    "input_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7",
+    "output_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b"
+  },
+  {
+    "folder": "music-panel",
+    "script": "Apply-Music.ps1",
+    "manifest": "MusicPatch.json",
+    "input_name": "SpongeBob-Movie-USA-Panel-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-Music-TEST.iso",
+    "input_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b",
+    "output_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13"
+  },
+  {
+    "folder": "debug-menu",
+    "script": "Apply-DebugMenu.ps1",
+    "manifest": "DebugMenuPatch.json",
+    "input_name": "SpongeBob-Movie-USA-Music-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-DebugMenu-TEST.iso",
+    "input_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+    "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8"
+  },
+  {
+    "folder": "damage-menu",
+    "script": "Apply-DamageMenu.ps1",
+    "manifest": "DamageMenuPatch.json",
+    "input_name": "SpongeBob-Movie-USA-DebugMenu-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-DamageMenu-TEST.iso",
+    "input_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+    "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630"
+  },
+  {
+    "folder": "health-menu",
+    "script": "Apply-HealthMenu.ps1",
+    "manifest": "HealthMenuPatch.json",
+    "input_name": "SpongeBob-Movie-USA-DamageMenu-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-HealthMenu-TEST.iso",
+    "input_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+    "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a"
+  }
+]

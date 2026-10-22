@@ -40,13 +40,25 @@
   "retail_damage_subtraction_cases": 96,
   "retail_damage_scope": "actual instructions 0x32b774 through health write at 0x32baec; other paths untested",
   "hardware_evidence": {
-    "date": "2026-10-22",
     "source": "owner report in chat",
     "quote": "it works fine",
-    "environment": "established CFW PS3 CECH-2001A setup",
-    "scope": "basic reported success for supplied four-row DamageMenu-TEST after 1 -> 0 -> 1 test instructions",
-    "individual_damage_off_on_observations_recorded": false,
-    "extended_hazard_transition_coverage_verified": false,
-    "screenshot_supplied": false
-  }
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "initial_hardware_tested": true,
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
 }

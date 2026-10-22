@@ -25,7 +25,29 @@
   "interaction_sequence_steps": 9,
   "operator_patcher": "generated full ISO successfully",
   "guards": "wrong input and existing output rejected",
-  "hardware_tested": false,
+  "hardware_tested": true,
   "gameplay_effect": "test row has no gameplay effect",
-  "scope": "custom interactive panel, not original menu restoration"
+  "scope": "custom interactive panel, not original menu restoration",
+  "initial_hardware_tested": false,
+  "hardware_evidence": {
+    "source": "owner report in chat",
+    "quote": "IT WORKED",
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
 }

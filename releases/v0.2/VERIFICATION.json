@@ -1,0 +1,72 @@
+{
+  "version": "v0.2",
+  "date": "2026-10-22",
+  "fixture_cases_passed": 14,
+  "fixtures": [
+    "success",
+    "wrong source",
+    "old bytes",
+    "offset bounds",
+    "negative offset",
+    "fractional offset",
+    "overlap",
+    "bad hex",
+    "odd hex",
+    "length mismatch",
+    "output mismatch cleanup",
+    "existing output",
+    "same input output",
+    "hash cmdlet unavailable"
+  ],
+  "full_iso_stages": [
+    {
+      "stage": "overlay",
+      "output_sha256": "eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "select-toggle",
+      "output_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "debug-panel",
+      "output_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "music-panel",
+      "output_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "debug-menu",
+      "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "damage-menu",
+      "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    },
+    {
+      "stage": "health-menu",
+      "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a",
+      "bytes": 1249804288,
+      "source_hash_unchanged": true
+    }
+  ],
+  "health_menu_instruction_cases": 6656,
+  "existing_pointer_guard_cases": 36,
+  "health_readout_cases": 41,
+  "interaction_steps": 12,
+  "new_health_display_hardware_tested": false,
+  "hardware_evidence": "first six stage images owner-reported working; new HP candidate has no console report",
+  "all_python_sources_parse": true
+}

@@ -36,12 +36,25 @@
   "operator_patcher": "Windows PowerShell generated full ISO; wrong input and existing output rejected",
   "new_menu_hardware_tested": true,
   "hardware_evidence": {
-    "type": "owner_report",
-    "date": "2026-10-22",
-    "platform": "CFW PS3 running the USA PS2 build",
-    "report": "it worked fine",
-    "build_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
-    "scope": "General success reported for the supplied expanded DebugMenu-TEST.iso. Individual readouts, game modes and transition coverage were not separately described.",
-    "extended_stability_verified": false
-  }
+    "source": "owner report in chat",
+    "quote": "it worked fine",
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "initial_hardware_tested": true,
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
 }

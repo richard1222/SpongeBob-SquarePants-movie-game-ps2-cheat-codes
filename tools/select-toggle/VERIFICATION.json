@@ -5,11 +5,33 @@
   "old_hex": "f0ffbd270000bfff089d838f0300601400000000050000100000bfdf58a4120c00000000fbff0010000000000800e0031000bd27000000000000000000000000",
   "new_hex": "7b00023c20b5428c0b004010089d838f3000428c02004230030040100000000001006338089d83af030060100000000058a41208000000000800e00300000000",
   "cases_passed": 20,
-  "hardware_tested": false,
+  "hardware_tested": true,
   "different_bytes_vs_probe": 49,
   "diff_min": 878517296,
   "diff_max": 878517355,
   "output_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7",
   "no_overwrite_test": "passed",
-  "wrong_input_test": "passed"
+  "wrong_input_test": "passed",
+  "initial_hardware_tested": false,
+  "hardware_evidence": {
+    "source": "owner report in chat",
+    "quote": "it worked",
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
 }

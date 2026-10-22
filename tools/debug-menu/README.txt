@@ -45,3 +45,11 @@ Python 3, standard library only:
 DEVELOPER-SPEC.json contains the exact emitted instructions and patch guards.
 These tests model the position/scene formatter and audio backend calls; they do
 not execute the game renderer or establish console compatibility.
+
+V0.2 PATCHER UPDATE
+This script uses .NET hashing and validates the manifest before copying.
+It builds a uniquely named .partial file beside the requested output and
+publishes the final filename only after the expected SHA-256 passes. Handled
+failures remove the temporary file; force-killing PowerShell or loss of power
+may leave a .partial file. It is not a completed ISO. Existing outputs are kept.
+Optional command line: powershell.exe -NoProfile -File Apply-DebugMenu.ps1 -InputIso "input.iso" -OutputIso "new-output.iso"

@@ -1,0 +1,24 @@
+{
+  "hardware_tested": true,
+  "hardware_evidence": {
+    "source": "owner report in chat",
+    "quote": "Controller/status overlay appeared",
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "eecc8a3fddec908daf626762c39dbed697b32746604b9bafd3f29ee82b3fa6c9",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
+}

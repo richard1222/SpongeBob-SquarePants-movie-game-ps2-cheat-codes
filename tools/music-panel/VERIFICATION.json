@@ -26,9 +26,25 @@
   "hardware_tested": true,
   "scope": "custom row pauses/resumes existing music handles; does not alter saved volume or INI NoMusic flag",
   "hardware_evidence": {
-    "type": "owner_report",
-    "date": "2026-10-22",
-    "report": "it worked",
-    "context": "Owner tested the GoFile Music-TEST.iso following pause/resume and sound-effect instructions; no console capture or extended transition results supplied."
-  }
+    "source": "owner report in chat",
+    "quote": "it worked",
+    "scope": "original stage ISO in established CFW PS3 context; general success does not establish all modes or transitions"
+  },
+  "initial_hardware_tested": true,
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
 }

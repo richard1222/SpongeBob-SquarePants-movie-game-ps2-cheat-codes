@@ -38,3 +38,11 @@ python test_damage_menu.py "path/to/original/SLUS_209.04"
 Additional retail branch test:
 python test_retail_damage.py "path/to/original/SLUS_209.04"
 96 cases verify one actual retail health-subtraction branch.
+
+V0.2 PATCHER UPDATE
+This script uses .NET hashing and validates the manifest before copying.
+It builds a uniquely named .partial file beside the requested output and
+publishes the final filename only after the expected SHA-256 passes. Handled
+failures remove the temporary file; force-killing PowerShell or loss of power
+may leave a .partial file. It is not a completed ISO. Existing outputs are kept.
+Optional command line: powershell.exe -NoProfile -File Apply-DamageMenu.ps1 -InputIso "input.iso" -OutputIso "new-output.iso"

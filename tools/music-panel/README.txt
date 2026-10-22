@@ -26,3 +26,11 @@ Output SHA-256: 973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13
 
 Owner hardware report, 2026-10-22: "it worked", after pause/resume and sound-effect instructions on the established CFW PS3. This is reported basic success, not proof of extended mode/transition stability. This is a custom panel, not restoration of an original developer menu.
 
+
+V0.2 PATCHER UPDATE
+This script uses .NET hashing and validates the manifest before copying.
+It builds a uniquely named .partial file beside the requested output and
+publishes the final filename only after the expected SHA-256 passes. Handled
+failures remove the temporary file; force-killing PowerShell or loss of power
+may leave a .partial file. It is not a completed ISO. Existing outputs are kept.
+Optional command line: powershell.exe -NoProfile -File Apply-Music.ps1 -InputIso "input.iso" -OutputIso "new-output.iso"

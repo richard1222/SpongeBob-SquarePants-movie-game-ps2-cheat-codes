@@ -1,0 +1,64 @@
+{
+  "health_readout_cases": 41,
+  "instruction_cases": 6656,
+  "pointer_guard_cases": 36,
+  "interaction_steps": 12,
+  "retail_music_instructions_executed": true,
+  "position_scene_and_sound_backend": "external calls modeled; retail position/scene bodies inspected statically",
+  "hardware_tested": false,
+  "damage_flag_hardware_tested": false,
+  "source_music_hardware": "owner reported it worked on CFW PS3 on 2026-10-22",
+  "input_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
+  "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a",
+  "output_md5": "6e3e6c97a86d326bd5d4c0f539d56767",
+  "iso_bytes": 1249804288,
+  "different_bytes": 326,
+  "patch_windows": [
+    [
+      878517296,
+      878517360
+    ],
+    [
+      879194816,
+      879195008
+    ],
+    [
+      880619504,
+      880619932
+    ],
+    [
+      879195176,
+      879195240
+    ],
+    [
+      880791698,
+      880791803
+    ]
+  ],
+  "health_pointer_global": "0x007ABC10",
+  "health_member_offset": "0x460",
+  "retail_health_getter": "0x002DFC70",
+  "retail_health_name_table_entry": "0x005FE088",
+  "unavailable_health": -1,
+  "health_writes": false,
+  "new_health_display_hardware_tested": false,
+  "source_damage_menu_hardware": "owner report: it works fine, 2026-10-22, established CFW PS3 setup",
+  "patcher_guards": "wrong source and existing output rejected; Windows PowerShell produced verified ISO",
+  "initial_hardware_tested": false,
+  "patcher_version": "v0.2",
+  "patcher_changes": [
+    ".NET stream hashing",
+    "source locked against writes through copy",
+    "manifest validation",
+    "verified temporary output before final filename",
+    "temporary output cleanup on handled failure",
+    "optional -OutputIso"
+  ],
+  "v02_patcher_full_iso_test": {
+    "passed": true,
+    "source_hash_unchanged": true,
+    "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a",
+    "bytes": 1249804288
+  },
+  "v02_common_regression_cases": 14
+}

@@ -33,3 +33,11 @@ No ISO is bundled. Windows PowerShell is sufficient; no Python, administrator ri
 Expected input SHA-256: 78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7
 Expected output SHA-256: 9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b
 
+
+V0.2 PATCHER UPDATE
+This script uses .NET hashing and validates the manifest before copying.
+It builds a uniquely named .partial file beside the requested output and
+publishes the final filename only after the expected SHA-256 passes. Handled
+failures remove the temporary file; force-killing PowerShell or loss of power
+may leave a .partial file. It is not a completed ISO. Existing outputs are kept.
+Optional command line: powershell.exe -NoProfile -File Apply-Panel.ps1 -InputIso "input.iso" -OutputIso "new-output.iso"
