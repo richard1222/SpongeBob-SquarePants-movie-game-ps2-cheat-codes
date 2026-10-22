@@ -27,7 +27,7 @@ See [the original implementation evidence](HEALTH-MENU-2026-10-22.md). Keep the 
 | H05 | Switch to Damage 0; take comparable ordinary hit | Existing damage-off behavior remains and HP reflects actual value | PARTIAL PASS — owner confirms ordinary hit does no damage; HP value during this specific hit not separately stated |
 | H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PARTIAL PASS — owner confirms one hamburger lost after restoring Damage 1; HP value for this hit not separately reported |
 | H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PENDING |
-| H08 | Pass through loading, level transition, and player-character transition if available | No crash, stale value, or bogus pointer-read display | PENDING |
+| H08 | Pass through loading, level transition, and player-character transition if available | No crash, stale value, or bogus pointer-read display | PARTIAL PASS — owner reached level 2, debug menu remained present and displayed HP3 matching reported three hamburgers; character transition not independently tested |
 | H09 | Die/restart and reopen menu | No freeze; HP reflects new player state | PASS (owner report) — game reloaded normally, HP3 displayed, matching three hamburgers |
 | H10 | Return to title and reload a level | Menu and HP behave correctly after reinitialization | PENDING |
 
@@ -52,3 +52,6 @@ Owner reports that after changing back from `Damage 0` to `Damage 1`, an ordinar
 
 ### Reload / restart hardware update
 After the earlier gameplay death and subsequent tests, owner reports the game reloaded fine and the custom menu read `HP3`, matching three hamburger health units. This supports the restart/lifecycle check; character switching and separate title-to-level transitions remain untested.
+
+### Level 1 → level 2 hardware update
+Owner reported progressing into level 2 with the custom debug menu still present and displaying `HP3`, with three hamburgers reported. This supports successful first level transition and HP correctness across that transition. Additional levels and character changes remain unverified.
