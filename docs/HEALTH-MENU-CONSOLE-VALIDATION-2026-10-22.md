@@ -20,10 +20,10 @@ See [the original implementation evidence](HEALTH-MENU-2026-10-22.md). Keep the 
 
 | ID | Action | Expected observation | Result / exact values |
 | --- | --- | --- | --- |
-| H01 | Launch HealthMenu-TEST to stable gameplay; open custom menu | Menu appears with `Damage … HP…`, no freeze or clipped rows | PENDING |
+| H01 | Launch HealthMenu-TEST to stable gameplay; open custom menu | Menu appears with `Damage … HP…`, no freeze or clipped rows | PARTIAL PASS — HP display visible; no reported crash |
 | H02 | Note HUD health and menu HP before taking damage | Numeric HP is plausible and stable | PENDING |
-| H03 | With Damage 1, take one ordinary enemy hit | HP decreases in step with game health | PENDING |
-| H04 | Collect an ordinary health pickup | HP increases or otherwise matches observed game health behavior | PENDING |
+| H03 | With Damage 1, take one ordinary enemy hit | HP decreases in step with game health | PASS — owner reported HP3 → HP1 after 2 hits, 2 hamburgers lost; toggle state not independently recorded |
+| H04 | Collect an ordinary health pickup | HP increases or otherwise matches observed game health behavior | PASS — owner reported recovery to 2 hamburgers and HP2; pickup type not explicitly reported |
 | H05 | Switch to Damage 0; take comparable ordinary hit | Existing damage-off behavior remains and HP reflects actual value | PENDING |
 | H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PENDING |
 | H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PENDING |
@@ -39,3 +39,7 @@ For each failure, record **test ID, image identifier/hash, area and character, a
 **No-go:** wrong/stale HP, persistent `HP-1` during stable gameplay, freeze, or a regression in existing controls. Revert testing to DamageMenu-TEST; do not alter the original ISO. Investigate pointer lifetime, formatter stack argument, or retained delay-slot behavior based on the failing case.
 
 **Unverified until owner results arrive:** all rows above; no console outcome has been inferred from modeled MIPS tests.
+
+## Owner console observations — October 22, 2026
+
+On PS3, owner reported initial `HP3`, followed by `HP1` after two hits and loss of two hamburger health units. Owner subsequently reported two hamburgers and `HP2`, consistent with health recovery. These are **owner-reported hardware observations**, not an independently captured trace. Exact build hash on PS3, Damage toggle setting during hits, and transition behavior still need separate confirmation. Preserve the working DamageMenu fallback.
