@@ -1,0 +1,41 @@
+SPONGEBOB MOVIE DEBUG TOOLS v0.4
+
+Extract the complete ZIP. Windows PowerShell is sufficient for patching.
+Each stage checks the exact input hash and creates a separate ISO.
+
+Already have the stable HealthMenu-TEST ISO?
+Run tools/health-menu-refill/APPLY-HEALTH-MENU-REFILL.cmd and select it.
+
+Starting from the matching original USA SLUS_209.04 ISO?
+Run these in order, selecting the previous stage's output each time:
+1 tools/overlay/APPLY-OVERLAY.cmd
+2 tools/select-toggle/APPLY-SELECT-TOGGLE.cmd
+3 tools/debug-panel/APPLY-PANEL.cmd
+4 tools/music-panel/APPLY-MUSIC.cmd
+5 tools/debug-menu/APPLY-DEBUG-MENU.cmd
+6 tools/damage-menu/APPLY-DAMAGE-MENU.cmd
+7 tools/health-menu/APPLY-HEALTH-MENU.cmd
+8 tools/health-menu-refill/APPLY-HEALTH-MENU-REFILL.cmd
+
+Final output: SpongeBob-Movie-USA-HealthMenuRefill-TEST.iso
+SHA-256: 8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883
+
+SELECT shows/hides; UP/DOWN selects a row; X changes its value.
+Rows: Music, XYZ, Scene/controller, Damage with current HP.
+Damage 1 is normal damage; Damage 0 disables the tested ordinary-hit path.
+Hiding the menu does not reset Damage.
+
+Refill: in a level, START pause, hold L1+L2+R1+R2 and press
+CIRCLE x4, SQUARE, CIRCLE, SQUARE, CIRCLE. Release shoulders and resume.
+The original cheat grants six slots; refill sets HP to the current maximum.
+No new menu row is added. Use a spare save: slot upgrades can persist.
+
+The owner reports the combined test worked in order with no issues on CFW
+PS3 Slim CECH-2001A / ps2_netemu. Other hardware and extended coverage remain
+unverified. This is a custom menu, not a restored original developer menu.
+
+Separate tools/cheat-seq-test and tools/health-refill-test are clean-retail
+research probes, not steps in the cumulative chain. Read their own READMEs.
+All other helpers and developer tests are described in tools/README.md.
+No game files or external SDK/tool binaries are bundled.
+Read releases/v0.4/RELEASE_NOTES.md for validation, limits and credits.

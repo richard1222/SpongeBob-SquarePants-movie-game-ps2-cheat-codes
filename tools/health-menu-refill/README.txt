@@ -1,5 +1,5 @@
 SPONGEBOB MOVIE - COMBINED HEALTH MENU + REFILL TEST
-USA SLUS_209.04 - v0.4 development candidate, not a published v0.4 release.
+USA SLUS_209.04 - v0.4 release package. Check the GitHub release page for publication status.
 
 WHAT THIS COMBINES
 The owner-tested four-row HealthMenu and the separately owner-tested retail
@@ -67,4 +67,4 @@ OWNER CONSOLE RESULT - 2026-10-22
 The earlier HP3 message described starting health, not a failed refill.
 After the supplied sequence, the owner reported "everything worked in order
 no issues". Basic combined success is recorded. Extended coverage and exact
-post-cheat HP were not separately captured. This is not a published v0.4 release.
+post-cheat HP were not separately captured. See the v0.4 GitHub release page for package/publication status.

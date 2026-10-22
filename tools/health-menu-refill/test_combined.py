@@ -15,6 +15,7 @@ def main():
     parser.add_argument('retail_elf',type=Path)
     parser.add_argument('--health-menu-iso',required=True,type=Path)
     parser.add_argument('--combined-iso',required=True,type=Path)
+    parser.add_argument('--receipt',type=Path,help='Optional new run receipt path; refuses existing files and never changes the shipped owner-validation receipt')
     args=parser.parse_args()
     retail=args.retail_elf.read_bytes()
     assert hashlib.sha256(retail).hexdigest()=='2ff117f45e80be5e2d73b6c952f4b5adfb8d359c8cc6c14eb5906197994ce956'
@@ -120,7 +121,10 @@ def main():
              'menu_elf_preserved_outside_two_refill_sites':True,
              'hardware_tested':False,
              'limits':'Synthetic valid runtime objects; external hash/object/event, renderer, position/scene and sound backend calls modeled. This does not boot PS2/PS3, test live cheat input, saves or transitions.'}
-    (HERE/'VERIFICATION.json').write_text(json.dumps(receipt,indent=2)+'\n',encoding='utf8')
+    if args.receipt:
+        # Historical owner results must survive developer simulation reruns.
+        with args.receipt.open('x',encoding='utf8') as stream:
+            stream.write(json.dumps(receipt,indent=2)+'\n')
     print('COMBINED PASS',json.dumps(receipt,indent=2))
 
 if __name__=='__main__':main()

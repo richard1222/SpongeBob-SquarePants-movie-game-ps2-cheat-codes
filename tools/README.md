@@ -1,4 +1,4 @@
-# SpongeBob Movie Debug Tools — v0.3
+# SpongeBob Movie Debug Tools — v0.4
 
 Extract the complete release ZIP before running a CMD launcher. Each stage is self-contained in its folder. Windows PowerShell is sufficient for patching; Python is only needed for developer tests. Use the exact matching USA SLUS_209.04 image for the selected stage.
 
@@ -11,12 +11,13 @@ Extract the complete release ZIP before running a CMD launcher. Each stage is se
 | debug-menu | Music-TEST | DebugMenu-TEST: three rows |
 | damage-menu | DebugMenu-TEST | DamageMenu-TEST: four rows |
 | health-menu | DamageMenu-TEST | HealthMenu-TEST: live HP beside Damage |
+| health-menu-refill | HealthMenu-TEST | HealthMenuRefill-TEST: adds original-cheat refill |
 
-All seven stage images have been reproduced byte-identically in Muse's Neptune regression run (14/14 fixtures, 7/7 full-image stages). The owner also reports the HealthMenu stage working on a CFW PS3's PS2 software emulator: HP display followed hits, recovery, restart and the first level transition; Damage 0/1 and Select still worked. These are owner reports, not independent console traces. Original PS2 hardware and PCSX2 remain untested. This is a custom debug interface, not a recovered original developer menu.
+The first seven stage images were reproduced byte-identically in Muse's Neptune regression run. The combined eighth stage passed its local byte/instruction checks and the owner reports “everything worked in order no issues” on the established CFW PS3 setup. Final extracted-package verification records all eight stages in PACKAGE-VERIFICATION.json attached to the release. The owner also reports the HealthMenu stage working on a CFW PS3's PS2 software emulator: HP display followed hits, recovery, restart and the first level transition; Damage 0/1 and Select still worked. These are owner reports, not independent console traces. Original PS2 hardware and PCSX2 remain untested. This is a custom debug interface, not a recovered original developer menu.
 
 Each patcher checks complete source and output SHA-256 values, original bytes, patch bounds and non-overlap. It keeps the input open against modification while hashing/copying. It writes a unique `.partial` file and moves it to the final filename only after verification, refusing overwrites. Handled failures clean up their temporary file. Force-killing PowerShell or losing power can leave a `.partial` file; it is not a completed ISO.
 
-Allow roughly 1.25 GB of free space for each new stage output you retain. Starting from an existing DamageMenu-TEST only requires the health-menu stage. Building and retaining the entire chain uses about 8.75 GB for seven outputs, plus the original image.
+Allow roughly 1.25 GB of free space for each new stage output you retain. Starting from an existing DamageMenu-TEST only requires the health-menu stage. Building and retaining the entire chain uses about 10 GB for eight outputs, plus the original image (about 11.25 GB total, decimal).
 
 Optional command-line use, shown for the HP stage:
 
@@ -42,3 +43,18 @@ python tools/test_patchers.py --iso-dir "folder with stage inputs" --original-is
 Individual menu tests accept a privately extracted, matching original SLUS_209.04 executable. The debug-panel test needs no game files. `dolphin_container_smoke.py` is a retained GameCube container helper; it is not PS2 runtime validation.
 
 No ISO, full executable, game asset, credentials or third-party SDK binaries are included.
+
+## Combined refill and separate probes
+
+For the latest combined build, apply only stage 8 if you already have HealthMenu. See [QUICK_START.txt](../QUICK_START.txt) for the original paused shoulder-button refill sequence and all eight launchers. The original slot upgrade can persist in saves; use a spare save when experimenting.
+
+The clean-retail cheat-seq-test and health-refill-test are independent research probes. They are included with all project helpers and tests, but are not cumulative stages. The custom menu still has four rows; refill uses the original cheat sequence.
+
+Combined tests (Python 3.11+, no -O):
+
+```text
+python tools/test_patchers.py --patcher health-menu-refill/Apply-HealthMenuRefill.ps1 --manifest HealthMenuRefillPatch.json
+python tools/health-menu-refill/test_combined.py "retail/SLUS_209.04" --health-menu-iso "HealthMenu-TEST.iso" --combined-iso "HealthMenuRefill-TEST.iso"
+```
+
+Combined tests print a fresh simulation result. They preserve the shipped owner receipt; add `--receipt "new-run.json"` to save a separate result (existing files refused).

@@ -61,5 +61,14 @@
     "output_name": "SpongeBob-Movie-USA-HealthMenu-TEST.iso",
     "input_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
     "output_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a"
+  },
+  {
+    "folder": "health-menu-refill",
+    "script": "Apply-HealthMenuRefill.ps1",
+    "manifest": "HealthMenuRefillPatch.json",
+    "input_name": "SpongeBob-Movie-USA-HealthMenu-TEST.iso",
+    "output_name": "SpongeBob-Movie-USA-HealthMenuRefill-TEST.iso",
+    "input_sha256": "fbfa8154a436e7c1cb1a06b54b85296524ab151d1098bcf631b0b8e3ec9e629a",
+    "output_sha256": "8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883"
   }
 ]

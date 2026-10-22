@@ -33,34 +33,15 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
-**Combined candidate owner-tested:** HealthMenu plus the original six-slot cheat refill, SHA-256 `8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883`. Local instruction, interaction and patcher checks pass; **the owner now reports “everything worked in order no issues” on the established CFW PS3 setup**. [Console report](docs/HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md) · [Download and test instructions](docs/HEALTH-MENU-REFILL-2026-10-22.md) · [Incremental patcher](tools/health-menu-refill/). Stable v0.3 is preserved; v0.4 is still development only.
+**v0.4 release preparation:** complete tools package with eight cumulative patch stages, including the combined HealthMenu and original six-slot cheat refill. The owner reports **“everything worked in order no issues”** on CFW PS3 Slim CECH-2001A / ps2_netemu. Exact post-cheat HP was not separately recorded. [Console receipt](docs/HEALTH-MENU-REFILL-CONSOLE-2026-10-22.md) · [v0.4 notes](releases/v0.4/RELEASE_NOTES.md) · [Quick start](QUICK_START.txt).
 
-**New menu evidence:** GameCube structure/event references checked against the actual PS2 menu archive identify the health cheat's pause counter and its separate 11-member power-up refresh group. [Findings, pinned sources and reproduction](docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md). Xbox documentation reviewed; no Xbox executable comparison or new game patch in this pass.
+The combined ISO hash remains `8b9d5d006d6b3db0417e44736e1b4eacc68a53aa6fcdbef534157313a61e1883`. The four menu rows control music, XYZ, scene/controller diagnostics and Damage with live HP. Refill uses the original paused shoulder-button cheat; it adds no row. [Build evidence and ISO download](docs/HEALTH-MENU-REFILL-2026-10-22.md).
 
+Local integration checks pass 6,656 menu cases, 352 callback comparisons (704 executions), 704 menu/refill interaction cases, 41 HP cases, 36 pointer guards, 96 damage cases and the patcher fixtures. The final extracted archive is checked before publication. [Release status](releases/v0.4/DEVELOPMENT_STATUS.md). Published v0.3 remains available unchanged; v0.4 publication is established by its GitHub release page.
 
-**Stable release:** [v0.3](https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/tag/v0.3) — owner-tested custom HealthMenu for CFW PS3 Slim `ps2_netemu`, with all seven tested cumulative patcher stages. **Active development: v0.4**, investigating the *original* Heavy Iron retail cheat system. This does **not** indicate a published v0.4 release. [v0.4 milestone and release gates](releases/v0.4/DEVELOPMENT_STATUS.md).
+GameCube structure/event references were checked against actual PS2 menu assets to identify the pause counter and its separate power-up refresh group. [Cross-platform findings](docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md). The nine-record retail cheat system and an isolated sequence replacement were also traced/tested. [Cheat trace](docs/V0.4-PS2-CHEAT-TRACE-2026-10-22.md).
 
-**v0.4 first hardware milestone — October 22, 2026:** Muse traced `zGameCheatsUpdate` at PS2 retail address `0x002D2740` and confirmed a nine-record cheat table. A separate one-data-byte `CheatSeq-TEST` ISO replaced the Patrick Caveman code with **Square ×6, Circle ×2**. On PS3 Slim, the owner reported success sound for the new sequence and no success for the replaced original sequence; Muse verified the mounted ISO's SHA-256 `f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac`. **Correct entry:** start a level, pause with START, hold all four shoulder buttons L1+L2+R1+R2, then press the Square/Circle sequence. The initial *Triangle* instructions were incorrect. This probe uses the **original retail ISO**, not a combined HealthMenu+cheat build. [PS2 instruction-level trace](docs/V0.4-PS2-CHEAT-TRACE-2026-10-22.md) · [Probe and verification](tools/cheat-seq-test/).
-
-**v0.4 health-refill candidate — October 22, 2026:** a separate clean-retail build adds full healing to the original six-slot health cheat. Independent review passes 352 retail/patched callback comparisons (704 executions), with the built ISO hash and executable bytes verified. **Owner-reported PS3 result: “it worked i got 6.”** This confirms basic reported success after the supplied refill protocol; detailed pre/post HP and broader stability were not separately recorded. The wrapped-PowerShell-error harness bug is fixed; eight message tests and all 14 patcher fixtures pass. [Review and corrected UI-flow details](docs/V0.4-HEALTH-REFILL-REVIEW-2026-10-22.md) · [Candidate and tests](tools/health-refill-test/). Stable v0.3 is unchanged; this is not a combined HealthMenu-plus-refill release.
-
-**Current owner-tested candidate — October 22, 2026:** a separate **live HP display** adds the current health integer beside row 4's Damage toggle. It passed 6,656 menu instruction cases, 36 existing pointer-guard cases and 41 health-readout cases. **PS3 hardware checks now confirm** HP3→HP1 after two hits, HP2 after recovery, Damage 0 protection, restoration of damage with Damage 1, HP3 after restart and after reaching level 2, and owner-reported continued operation of the existing controls. These are owner reports, not independently captured traces; other PS2 hardware and emulators remain untested. [Console results](docs/HEALTH-MENU-CONSOLE-VALIDATION-2026-10-22.md). [HP patcher and tests](tools/health-menu/) · [Retail evidence and checks](docs/HEALTH-MENU-2026-10-22.md).
-
-**Working baseline — October 22, 2026:** a separate **four-row damage-menu test** adds a reversible retail damage-flag control at 0x007ABB20. It passed 6,656 menu instruction cases, 36 pointer-guard cases and 96 focused retail health-decrement cases; the full ISO differs by 388 bytes within the intended windows. **Owner report: “it works fine” on the established CFW PS3 setup.** This confirms basic reported success; separate damage-off/damage-on observations and broader hazard/transition coverage were not described. [Patcher and tests](tools/damage-menu/) · [Retail evidence and test instructions](docs/DAMAGE-MENU-2026-10-22.md). The owner-tested three-row menu is preserved as the fallback.
-
-**Previous milestone — October 22, 2026:** the owner reports that the real music pause/resume test **worked** on the CFW PS3. A new **three-row custom debug-menu ISO** now adds guarded XYZ and scene/controller diagnostics while retaining that music control and Select hide/show. It passes 4,992 instruction cases, 36 pointer-guard cases, a 12-step sequence, and a full-image comparison showing 656 changed bytes in five intended windows. **The owner subsequently reported “it worked fine” for the expanded menu on the established CFW PS3 setup.** This records basic reported success; individual feature and transition coverage were not separately described. [Tools and controls](tools/debug-menu/) · [Implementation, hashes and first-console-test receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This remains a custom interface; original developer-menu restoration is unconfirmed.
-
-| Work | Status |
-| --- | --- |
-| Identify the PS2 USA release | Actual USA disc inspected: SLUS_209.04; executable and source ISO hashed. |
-| Research existing controller cheats | Original cheat input traced; modified Patrick Caveman sequence owner-tested successfully on PS3 in isolated v0.4 probe. |
-| Search prototype sources | Hidden Palace, Internet Archive metadata, auction records, and indexed forum results searched. |
-| Verify an actual PS2 prototype | An August 31, 2004 test disc is documented by Heritage Auctions. No verified public dump located in this search. |
-| Check Wayback Machine | Targeted ASSEMblergames CDX request returned HTTP 503. Archived forum coverage remains incomplete. |
-| Obtain the working ISO | Actual Movie USA ISO found locally and inspected on October 21, 2026. |
-| Inspect executable and assets | Executable and INI inspected; retained debug-display path traced. Menu asset investigation continues. |
-| Custom debug panel | Basic display, row selection, test-value changes and Select hide/show confirmed by owner report. Original developer-menu restoration remains unconfirmed. |
-| Patches | Overlay, Select toggle, first custom panel and music pause/resume owner-confirmed; expanded three-row menu now reported working by the owner; extended stability remains unverified. |
+This is a custom debug interface. Original developer-menu restoration is unconfirmed. Original PS2 hardware, PCSX2 and extended character/hazard/save coverage remain unverified. Earlier milestones and the PS3 HP/damage observations remain documented in the linked research and console receipts.
 
 ## Prototype findings
 
@@ -92,14 +73,9 @@ These are original retail cheat sequences, not evidence of a developer debug men
 
 ## Next steps
 
-**Active v0.4 milestone plan:** [View the v0.4 roadmap](docs/V0.4-ROADMAP.md). Stable v0.3 is preserved; v0.4 is not a published release. The first original-cheat probe has passed owner-reported PS3 testing, but a combined HealthMenu+cheat build remains untested.
+Complete v0.4 extracted-package verification, publish the complete tools-only ZIP with checksums, and verify the downloadable release asset. The combined owner console milestone is recorded. [Milestone status](docs/V0.4-ROADMAP.md).
 
-1. Test the separate HealthMenu-TEST: compare HP against ordinary damage and pickups, then check all four controls and transitions. Preserve the owner-reported working DamageMenu-TEST and the three-row fallback.
-2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
-3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
-4. Inspect HIP/HOP assets for unused UI and development content; compare relevant prototypes where useful.
-5. Continue targeted forum and Wayback research around the August 31, 2004 disc and other documented builds.
-6. Test candidate changes in PCSX2, documenting original bytes, patched bytes, addresses, game CRC, activation steps, and results.
+Further game research remains focused on documented PS2 features, original cheat behavior and authenticated alternative builds. Broader save/load, character and hardware coverage remains open. Preserve v0.3, originals and the separate working images.
 
 ---
 
@@ -121,9 +97,9 @@ These are original retail cheat sequences, not evidence of a developer debug men
 
 ## Tools
 
-**Historical v0.2 toolset:** [release notes](releases/v0.2/RELEASE_NOTES.md) · [all seven stages and quick start](tools/README.md). The update fixes hashing compatibility and incomplete output handling, adds manifest checks and includes the new experimental HP readout. v0.1 remains available unchanged.
+**Historical v0.2 toolset:** [release notes](releases/v0.2/RELEASE_NOTES.md) · [historical notes](releases/v0.2/RELEASE_NOTES.md). The update fixes hashing compatibility and incomplete output handling, adds manifest checks and includes the new experimental HP readout. v0.1 remains available unchanged.
 
-**Stable v0.3 baseline:** [live HP patcher](tools/health-menu/) — adds the current health number beside Damage; owner-reported console tests passed. **v0.4 research probe:** [original cheat-sequence replacement](tools/cheat-seq-test/) owner-tested separately on PS3; not yet integrated into HealthMenu.
+**v0.4 complete tools:** [eight-stage guide](tools/README.md), [stage manifest](tools/STAGES.json), [combined patcher](tools/health-menu-refill/) and [release notes](releases/v0.4/RELEASE_NOTES.md). The separate sequence-replacement probe remains independent; the combined build integrates health refill with HealthMenu. Stable v0.3 stays available unchanged.
 
 **Owner-tested damage baseline:** [four-row damage-menu patcher](tools/damage-menu/) adds Damage 1/0 to the existing controls; the owner reports this build works fine on the established CFW PS3 setup; detailed hazard and transition coverage remains open. [Build and retail-code evidence](docs/DAMAGE-MENU-2026-10-22.md).
 
@@ -140,7 +116,7 @@ The [custom panel patcher](tools/debug-panel/) is published with input/overwrite
 
 ## Third-party tools and research credits
 
-This project's **seven-stage PowerShell ISO patchers, patch manifests, test harnesses and custom debug-menu changes** are project work. The external projects below are credited for their own tools, research, or documentation; they are **not claimed as our code**. Listing a project here does not imply endorsement, collaboration, or that its binaries are distributed in this release.
+This project's **eight-stage PowerShell ISO patchers, patch manifests, test harnesses and custom debug-menu changes** are project work. The external projects below are credited for their own tools, research, or documentation; they are **not claimed as our code**. Listing a project here does not imply endorsement, collaboration, or that its binaries are distributed in this release.
 
 | External project / creators | Credit and use |
 | --- | --- |
