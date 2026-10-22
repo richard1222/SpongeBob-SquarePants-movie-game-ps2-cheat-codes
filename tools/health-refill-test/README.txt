@@ -21,7 +21,7 @@ on hardware. Do not treat as working until the owner test below is done.
 THE PATCH (2 sites, 6 words, fully reversible)
 ----------------------------------------------
 1. VA 0x002D26CC, inside the retail callback: a dead nop word (it sits
-   after the unlockables-refresh loop, before the HUD confirm tail; at
+   after the unlockables-refresh loop, before the UI-refresh tail; at
    that point $t0/$t1 are dead and the callback restores $ra from its own
    stack frame) becomes:
        jal 0x0010F06C            (word 0x0C043C1B)
@@ -35,7 +35,7 @@ THE PATCH (2 sites, 6 words, fully reversible)
        jr   $ra
        sw   $t1, 0x460($t0)      ; (delay slot) current HP = max HP
    The leaf clobbers only $t0/$t1 and returns to the callback, whose
-   confirm flow and return then proceed exactly as retail.
+   UI-refresh flow and return then proceed exactly as retail.
 
 Nothing else changes: the cheat table, the sequences, the flags, the save
 format, and every other callback are byte-identical to retail. The input
@@ -76,3 +76,17 @@ REVERSING
 ---------
 Delete the experimental ISO. The retail ISO is never modified (the
 patcher writes a new file and hash-guards the source).
+
+INDEPENDENT REVIEW - 2026-10-22
+352 original-versus-patched callback scenarios pass (704 executions), with
+saved registers, stack return, slots, bonus bytes and UI-call behavior checked.
+The existing ISO hash and its extracted executable match the tested bytes.
+The callback's UI tail refers to PAUSESTATE MENU OR POWERUP COUNTER at
+0x61FEC4 and calls the UI function when the found object's state EQUALS 2.
+Earlier HP-confirm string and inverted-state descriptions were incorrect.
+No candidate ISO bytes changed. Hardware testing is still pending.
+
+Python 3.11+, standard library, no -O:
+python test_health_refill.py "path/to/original/SLUS_209.04" --patched-iso "path/to/HealthRefill-TEST.iso"
+Hash/object/UI function bodies are modeled. This does not run the game renderer
+or establish live pointer safety. See docs/V0.4-HEALTH-REFILL-REVIEW-2026-10-22.md.

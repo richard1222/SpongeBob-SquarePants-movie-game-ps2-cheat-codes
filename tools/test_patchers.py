@@ -11,6 +11,10 @@ def sha(path):
     with path.open('rb') as f:
         return hashlib.file_digest(f, 'sha256').hexdigest()
 
+def message_matches(expected, output):
+    """PowerShell may wrap one error sentence across terminal lines."""
+    return ' '.join(expected.split()).casefold() in ' '.join(output.split()).casefold()
+
 def main():
     parser=argparse.ArgumentParser()
     parser.add_argument('--iso-dir', type=Path, help='Optional directory containing stage ISO inputs')
@@ -59,7 +63,7 @@ def main():
             if success:assert dest.read_bytes()==expected,(case,'wrong output')
             elif case=='existing output':assert dest.read_bytes()==b'KEEP THIS'
             elif case!='same input output':assert not dest.exists(),(case,'failed final output left behind')
-            if want:assert want.lower() in log.lower(),(case,log)
+            if want:assert message_matches(want,log),(case,log)
             assert not list(folder.glob('*.partial')) and not list(folder.glob('.*.partial')),(case,'temporary output left behind')
             results.append(case)
         full=[]

@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-22",
+  "message_unit_tests": 8,
+  "patcher_fixture_cases": 14,
+  "callback_comparison_cases": 352,
+  "retail_and_patched_runs": 704,
+  "source_commit": "acb9ce961948bd70e1396d4df53322c044f23fd1",
+  "candidate_iso_sha256": "cab04bc299e73f1b261e63e855003a118936468c0e54cd3af36b3fb4e116c304",
+  "candidate_elf_sha256": "1175a8d7650a7c2a01cb76a955e23f00a73a8847f0d88f277ab6c0547a30b492",
+  "hardware_tested": false,
+  "game_patch_bytes_changed": false,
+  "full_seven_iso_stages_rerun": false,
+  "docs_corrected": [
+    "UI flow string address/name",
+    "UI equality condition",
+    "fallback UI state byte index"
+  ]
+}

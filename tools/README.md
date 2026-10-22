@@ -29,6 +29,7 @@ Default output names use the complete `SpongeBob-Movie-USA-...` names recorded i
 Run the game-free patcher regression fixtures with Python 3.11 or newer and Windows PowerShell:
 
 ```text
+python tools/test_patcher_messages.py
 python tools/test_patchers.py
 ```
 
