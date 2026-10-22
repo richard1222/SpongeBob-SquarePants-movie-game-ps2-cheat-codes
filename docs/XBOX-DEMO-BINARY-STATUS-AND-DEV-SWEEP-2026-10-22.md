@@ -66,17 +66,25 @@ Re-fetched XboxArchive/hashes at commit cb1925f1 and re-compared:
   checked 2026-10-22).
 - Build_OXM is a folder inside the Exhibition Volume 1 disc structure
   (redump 64277): a leftover multi-title launcher bundle, also seen in
-  Volume 2 — not evidence of an Official Xbox Magazine build. In that
-  disc's archived ISO the SpongeBob demo sits in the sibling Spongebob/
-  folder with SBMovie.xbe, four sb04*.bik movies, config_*.hip files and
-  an E3DemoStart level file (E3-demo lineage).
+  Volume 2 — not evidence of an Official Xbox Magazine build. Redump's
+  file records for that disc list the SpongeBob demo in the sibling
+  Spongebob/ folder with SBMovie.xbe, four sb04*.bik movies,
+  config_*.hip files and an E3DemoStart level file (E3-demo lineage).
+- The archive.org item for that disc was downloaded and checked at file
+  level on 2026-10-22: its ISO is only 14,319,616 bytes (SHA-1
+  e27f0c94aef79ced704d122d5062574a2376c636), a small ISO9660 image whose
+  contents contain no game files at all (filename scan negative for
+  SBMovie, sb04 and any .xbe). It is not the game-bearing disc image. A
+  "Volume 2 HDD-ready" archive.org item cited in some listings could
+  not be located on 2026-10-22.
 - Which XBE variant (A or B above) belongs to which physical disc is not
   established by the manifests. Unknown.
 
 ## 5. SBMovie.xbe code-vs-header comparison — BLOCKED
 
 No SBMovie.xbe bytes are available locally or from any public
-preservation record found, so the section-level comparison (certificate /
+preservation record found (section 4 documents the archive.org items
+checked and excluded), so the section-level comparison (certificate /
 header fields versus .text/.rdata differences) cannot be performed yet.
 tools/compare_xbox_movie_builds.py currently reads header fields only;
 a section-hash diff is the next tool step once a dump is lawfully
