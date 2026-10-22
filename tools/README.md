@@ -1,4 +1,4 @@
-# SpongeBob Movie Debug Tools v0.2
+# SpongeBob Movie Debug Tools — v0.3 release candidate
 
 Extract the complete release ZIP before running a CMD launcher. Each stage is self-contained in its folder. Windows PowerShell is sufficient for patching; Python is only needed for developer tests. Use the exact matching USA SLUS_209.04 image for the selected stage.
 
@@ -12,7 +12,7 @@ Extract the complete release ZIP before running a CMD launcher. Each stage is se
 | damage-menu | DebugMenu-TEST | DamageMenu-TEST: four rows |
 | health-menu | DamageMenu-TEST | HealthMenu-TEST: live HP beside Damage |
 
-The first six stage images are owner-reported working in the established CFW PS3 setup; full mode/transition coverage remains open. **The new HP build is hardware-unverified.** These are custom interfaces, not recovery of the original developer menu.
+All seven stage images have been reproduced byte-identically in Muse's Neptune regression run (14/14 fixtures, 7/7 full-image stages). The owner also reports the HealthMenu stage working on a CFW PS3's PS2 software emulator: HP display followed hits, recovery, restart and the first level transition; Damage 0/1 and Select still worked. These are owner reports, not independent console traces. Original PS2 hardware and PCSX2 remain untested. This is a custom debug interface, not a recovered original developer menu.
 
 Each patcher checks complete source and output SHA-256 values, original bytes, patch bounds and non-overlap. It keeps the input open against modification while hashing/copying. It writes a unique `.partial` file and moves it to the final filename only after verification, refusing overwrites. Handled failures clean up their temporary file. Force-killing PowerShell or losing power can leave a `.partial` file; it is not a completed ISO.
 
