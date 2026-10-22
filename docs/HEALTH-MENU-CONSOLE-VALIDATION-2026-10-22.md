@@ -26,7 +26,7 @@ See [the original implementation evidence](HEALTH-MENU-2026-10-22.md). Keep the 
 | H04 | Collect an ordinary health pickup | HP increases or otherwise matches observed game health behavior | PASS — owner reported recovery to 2 hamburgers and HP2; pickup type not explicitly reported |
 | H05 | Switch to Damage 0; take comparable ordinary hit | Existing damage-off behavior remains and HP reflects actual value | PARTIAL PASS — owner confirms ordinary hit does no damage; HP value during this specific hit not separately stated |
 | H06 | Restore Damage 1 and repeat ordinary hit | Damage behavior returns; HP changes appropriately | PARTIAL PASS — owner confirms one hamburger lost after restoring Damage 1; HP value for this hit not separately reported |
-| H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PENDING |
+| H07 | Exercise other menu rows, music pause/resume, and Select hide/show | Prior controls keep working | PARTIAL PASS — owner confirms Select hide/show still works on HealthMenu; music and other rows not yet separately confirmed |
 | H08 | Pass through loading, level transition, and player-character transition if available | No crash, stale value, or bogus pointer-read display | PARTIAL PASS — owner reached level 2, debug menu remained present and displayed HP3 matching reported three hamburgers; character transition not independently tested |
 | H09 | Die/restart and reopen menu | No freeze; HP reflects new player state | PASS (owner report) — game reloaded normally, HP3 displayed, matching three hamburgers |
 | H10 | Return to title and reload a level | Menu and HP behave correctly after reinitialization | PENDING |
@@ -55,3 +55,6 @@ After the earlier gameplay death and subsequent tests, owner reports the game re
 
 ### Level 1 → level 2 hardware update
 Owner reported progressing into level 2 with the custom debug menu still present and displaying `HP3`, with three hamburgers reported. This supports successful first level transition and HP correctness across that transition. Additional levels and character changes remain unverified.
+
+### Select control hardware update
+Owner confirms the Select button still hides and reopens the custom HealthMenu on PS3 after prior HP and level-transition tests. Music pause/resume remains to be tested separately on this build.
