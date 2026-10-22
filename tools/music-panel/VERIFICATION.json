@@ -1,0 +1,28 @@
+{
+  "input_sha256": "9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b",
+  "output_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
+  "iso_bytes": 1249804288,
+  "different_bytes": 170,
+  "patch_windows": [
+    [
+      878517296,
+      878517360
+    ],
+    [
+      879194816,
+      879195008
+    ],
+    [
+      880791698,
+      880791803
+    ]
+  ],
+  "instruction_cases_passed": 768,
+  "interaction_sequence_steps": 8,
+  "retail_music_functions_executed_in_simulation": true,
+  "sound_backend": "modeled, not executed",
+  "operator_patcher": "generated full ISO",
+  "guards": "wrong input and existing output rejected",
+  "hardware_tested": false,
+  "scope": "custom row pauses/resumes existing music handles; does not alter saved volume or INI NoMusic flag"
+}
