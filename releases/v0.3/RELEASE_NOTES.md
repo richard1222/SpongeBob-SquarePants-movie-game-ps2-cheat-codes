@@ -22,3 +22,22 @@ Seven cumulative patch stages: controller-debug overlay, Select hide/show, inter
 ## Release gate
 
 Before publication, build the distributable ZIP from the committed repository, run fixture and full-image stage tests against that exact distribution on Neptune, audit ZIP contents, and record ZIP SHA-256. Then publish an actual GitHub tag and release with the ZIP. Until that happens, these are **draft notes**, not a public v0.3 download.
+
+## Third-party tools and research credits
+
+This project's **seven-stage PowerShell ISO patchers, patch manifests, test harnesses and custom debug-menu changes** are project work. The external projects below are credited for their own tools, research, or documentation; they are **not claimed as our code**. Listing a project here does not imply endorsement, collaboration, or that its binaries are distributed in this release.
+
+| External project / creators | Credit and use |
+| --- | --- |
+| [Industrial Park — igorseabra4 and contributors](https://github.com/igorseabra4/IndustrialPark) | Heavy Iron HIP/HOP archive viewer and editor; game asset inspection reference ([GPL-3.0 license](https://github.com/igorseabra4/IndustrialPark/blob/master/LICENSE.md)). |
+| [PCSX2 — PCSX2 contributors](https://github.com/PCSX2/pcsx2) | Open-source PS2 emulator and compatibility-testing resource; separate from our patchers ([license information](https://github.com/PCSX2/pcsx2)). |
+| [The SpongeBob SquarePants Movie decompilation — bfbbdecomp contributors](https://github.com/bfbbdecomp/tssm) | GameCube-oriented decompilation, symbols and engine structures used as research references; not PS2 source code or shipped binaries ([upstream license](https://github.com/bfbbdecomp/tssm/blob/main/LICENSE)). |
+| [TSSM Dolphin Toolkit — ItsPepperpot](https://github.com/ItsPepperpot/TSSM-Dolphin-Toolkit) | GameCube runtime/configuration documentation and memory research; its addresses are **not** assumed valid on PS2. |
+| [Dolphin Emulator — Dolphin contributors](https://dolphin-emu.org/) | GameCube/Wii emulation ecosystem referenced by the external toolkit; not included in our release. |
+| [webMAN MOD — aldostools and contributors](https://github.com/aldostools/webMAN-MOD) | PS3 homebrew launcher environment relevant to the owner's PS2-ISO testing; not distributed with our patchers. |
+| [XboxArchive/hashes — its maintainers and contributors](https://github.com/XboxArchive/hashes) | Xbox game/demo file-hash manifests used for cross-build research; no Xbox executables bundled. |
+| [Hidden Palace](https://hiddenpalace.org/), [Internet Archive](https://archive.org/), [Redump](https://redump.org/), [The Cutting Room Floor](https://tcrf.net/) | Preservation records and historical reference material; no disc images redistributed. |
+
+Additional upstream credit: **Heavy Iron Studios** developed the original game; **THQ** published it. SpongeBob SquarePants and related properties belong to their respective rights holders. Community research does not imply rights-holder affiliation.
+
+**Redistribution and licenses:** Links above point to upstream projects and their own terms. Do not copy third-party code, assets, binaries, or licensed components into this repository/release without reviewing and complying with the applicable license and attribution requirements. This project's package contains original patching tools and documentation only, not the third-party tools listed here.
