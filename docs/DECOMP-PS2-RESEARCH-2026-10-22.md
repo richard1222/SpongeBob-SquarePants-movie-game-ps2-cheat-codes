@@ -62,3 +62,16 @@ The public DWARF listing labels PlayerPosition at 0x002E0800, while the retail n
 4. Keep the existing music candidate separate until the owner verifies real audio pause/resume.
 
 The music test remains hardware-unverified. Decompilation progress percentages and debug symbols do not establish that the game's original debug menu exists.
+
+
+## RenderWare documentation follow-up
+
+The Discord resources channel links a RenderWare 3.5 API Reference for PS2 archive. The linked CDN page returned “This content is no longer available” on 2026-10-22; its contents were not inspected.
+
+Useful available replacements:
+
+- [EA's RenderWare3Docs](https://github.com/electronicarts/RenderWare3Docs) contains publisher-released user guides and white papers. Its README specifies the PC release; treat common API explanations as references, not exact PS2 binary layouts.
+- [PS2/Sky2 rwplcore.h](https://github.com/sigmaco/rwsdk-v3.5-ps2/blob/82a98fe97a6346388e27e0c73068fc326109de68/rwsdk/include/sky2/rwplcore.h) in a preserved 3.5 reference mirror declares the platform's 2D immediate-mode rendering API.
+- [Criterion's metrics overlay sample](https://github.com/sigmaco/rwsdk-v3.5-ps2/blob/82a98fe97a6346388e27e0c73068fc326109de68/shared/skel/metrics.c) draws an alpha-blended box and text, changes depth/texture/alpha states, and saves/restores the source/destination blend functions.
+
+Practical inference: if our panel later gains a shaded background, inspect Movie's corresponding render-state wrappers and restore every state our hook changes. The sample's assumed exit defaults are not automatically valid for an arbitrary mid-frame retail hook. No RenderWare SDK binaries were installed, executed, or added to the tools release.
