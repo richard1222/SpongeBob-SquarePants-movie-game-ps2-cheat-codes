@@ -141,3 +141,8 @@ The owner explicitly confirms that the **controller/status overlay appeared** on
 ### Select overlay toggle — hardware-confirmed by owner report
 
 After testing the supplied toggle ISO and Select hide/show instructions, the owner reported **“it worked.”** Both the controller/status overlay and its custom Select on/off control are now confirmed by owner report on the established CFW PS3 setup. This confirms the basic reported interaction, not all game modes or extended stability. **Full original developer-menu restoration remains unconfirmed.** [Hardware test receipt](docs/DEBUG-PATH-2026-10-21.md#select-toggle-hardware-report--october-21-2026).
+
+
+## Debug-All expansion and PC handoff — October 21, 2026
+
+The existing hardware-confirmed overlay/SELECT-toggle baseline is preserved. A new [Debug-All research and PC handoff](docs/DEBUG-ALL-PC-HANDOFF-2026-10-21.md) inventories candidate config-based debug functionality and a staged verification/test plan. These additional GameCube-documented INI controls are **not yet verified on PS2**; no new runtime patch or full developer menu is claimed.
