@@ -1,6 +1,6 @@
-# SpongeBob Movie Debug Tools v0.3 — release candidate notes
+# SpongeBob Movie Debug Tools v0.3
 
-**Status: release candidate; NOT yet a published GitHub release.** Target USA PS2 `SLUS_209.04`. This version promotes the existing HealthMenu patch to the owner-tested PS3/ps2_netemu baseline; **no newly recovered retail developer menu is claimed**.
+**Status: stable release.** Target USA PS2 `SLUS_209.04`. The distributable ZIP SHA-256 is recorded on the GitHub release page and in RELEASE_READINESS.md. This version promotes the existing HealthMenu patch to the owner-tested PS3/ps2_netemu baseline; **no newly recovered retail developer menu is claimed**.
 
 ## Included
 
@@ -19,9 +19,9 @@ Seven cumulative patch stages: controller-debug overlay, Select hide/show, inter
 - `G.CheatFlyToggle`, `DebugMode`, and `E3DemoStart` remain investigation targets; not shipped as working controls. No Free Camera or level selection.
 - No proprietary game ISO, executable, or assets may be packaged or uploaded.
 
-## Release gate
+## Release gate (satisfied for v0.3)
 
-Before publication, build the distributable ZIP from the committed repository, run fixture and full-image stage tests against that exact distribution on Neptune, audit ZIP contents, and record ZIP SHA-256. Then publish an actual GitHub tag and release with the ZIP. Until that happens, these are **draft notes**, not a public v0.3 download.
+The distributable ZIP was built from the committed repository (see SOURCE_COMMIT.txt inside the ZIP), the fixture and full-image stage tests were run against that exact packaged distribution on Neptune (14/14 fixtures, 7/7 stages, sources unchanged), the ZIP contents were audited to exclude game data, and the ZIP SHA-256 was recorded on the GitHub release page. The packaged run receipt is releases/v0.3/VERIFICATION.json.
 
 ## Third-party tools and research credits
 

@@ -1,4 +1,4 @@
-# SpongeBob Movie Debug Tools — v0.3 release candidate
+# SpongeBob Movie Debug Tools — v0.3
 
 Extract the complete release ZIP before running a CMD launcher. Each stage is self-contained in its folder. Windows PowerShell is sufficient for patching; Python is only needed for developer tests. Use the exact matching USA SLUS_209.04 image for the selected stage.
 
