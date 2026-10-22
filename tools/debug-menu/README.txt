@@ -1,4 +1,4 @@
-SPONGEBOB MOVIE � EXPANDED DEBUG MENU TEST
+SPONGEBOB MOVIE - EXPANDED DEBUG MENU TEST
 
 Run APPLY-DEBUG-MENU.cmd on Windows and choose the owner-tested
 SpongeBob-Movie-USA-Music-TEST.iso (USA SLUS_209.04).
@@ -28,10 +28,12 @@ FIRST HARDWARE TEST
 5. Check loading, death/restart, character switches and returning to the title.
 6. Report freezes, crashes, flicker, missing text, wrong coordinates or stale data.
 
-New rows are hardware-UNVERIFIED. Pointer range/alignment/null guards and exact
+Owner report, 2026-10-22: "it worked fine" on the established CFW PS3.
+This confirms reported basic success; detailed row/transition coverage and
+extended stability were not separately established. Pointer range/alignment/null guards and exact
 instruction simulations passed; position/scene calls and audio backend were
 modeled. Actual retail music pause/resume instructions were executed in the
-simulation. Runtime object lifetimes and renderer behavior require console tests.
+simulation. Runtime object lifetimes and renderer behavior still need broader console coverage.
 
 Source Music-TEST owner report: "it worked", 2026-10-22, CFW PS3.
 No game image, game executable, external SDK binaries or credentials are bundled.
