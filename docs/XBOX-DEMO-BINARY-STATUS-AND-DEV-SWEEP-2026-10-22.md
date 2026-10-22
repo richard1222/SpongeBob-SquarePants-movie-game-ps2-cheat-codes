@@ -59,11 +59,22 @@ Re-fetched XboxArchive/hashes at commit cb1925f1 and re-compared:
 
 ## 4. Preservation status of the demo discs
 
-- Xbox Exhibition Volume 7 is redump disc 9264, "Exhibition: Volume 7
-  (Demo Disc)", serial X10-20974, barcode 805529993365, catalogued as an
-  XDK/Exhibition sample; content listings confirm the SpongeBob Movie
-  demo. No public dump was located (archive.org and Hidden Palace
-  checked 2026-10-22).
+- Xbox Exhibition Volume 7 is redump disc 55222, serial XK-045,
+  barcode 805529993365; content listings confirm the SpongeBob Movie
+  demo. The disc is catalogued on redump with full track hashes
+  (SHA-1 e6998e4c1679430c5f0cb86c5ec6d9d58735d2e7, dumper h0lylag) —
+  redump catalogues hashes only, the image is not downloadable there,
+  and no public dump was located elsewhere (archive.org and Hidden
+  Palace checked 2026-10-22). An earlier interim note in this project
+  cited disc 9264; 55222 is the verified record. The retail USA Xbox
+  baseline is redump disc 54262 (serial TQ-039, track SHA-1
+  3d19126c60909d9a13f07200a368deac520f34c0 — the same manifest used in
+  section 3).
+- An Official Australian Xbox Magazine demo is confirmed: Issue 38
+  (March 2005) covered a playable demo with two levels, "Three Thousand
+  Miles to Shell City" and "Sandwich Driving 101". The US OXM disc
+  number remains unidentified, and "Build_OXM" as a name has no public
+  record — it is an internal/community label only.
 - Build_OXM is a folder inside the Exhibition Volume 1 disc structure
   (redump 64277): a leftover multi-title launcher bundle, also seen in
   Volume 2 — not evidence of an Official Xbox Magazine build. Redump's
@@ -88,7 +99,7 @@ checked and excluded), so the section-level comparison (certificate /
 header fields versus .text/.rdata differences) cannot be performed yet.
 tools/compare_xbox_movie_builds.py currently reads header fields only;
 a section-hash diff is the next tool step once a dump is lawfully
-available. Blocked on: a dump of Exhibition Volume 7 (redump 9264) or of
+available. Blocked on: a dump of Exhibition Volume 7 (redump 55222) or of
 either compilation disc behind the manifests in section 3.
 
 ## 6. sb04.ini comparison status
