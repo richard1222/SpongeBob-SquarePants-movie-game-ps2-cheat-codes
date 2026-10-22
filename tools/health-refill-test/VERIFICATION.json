@@ -24,8 +24,10 @@
     "external_calls": "hash lookup, object lookup and UI calls modeled; bodies not executed",
     "correct_flow_name": "PAUSESTATE MENU OR POWERUP COUNTER",
     "correct_flow_string_address": "0x0061FEC4",
-    "correct_ui_call_condition": "object exists and its +0x14 state equals 2",
-    "hardware_tested": false
+    "correct_ui_call_condition": "counter exists and its signed +0x14 count equals 2",
+    "hardware_tested": false,
+    "event_destination": "PU SET TEXT ALL GROUP",
+    "event_semantics": "0x3C: Evaluate inferred from GameCube header and supported by PS2 group contents; external handler bodies remain modeled"
   },
   "initial_hardware_tested": false,
   "owner_hardware_report": {

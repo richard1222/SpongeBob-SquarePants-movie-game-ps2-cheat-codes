@@ -33,6 +33,9 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
+**New menu evidence:** GameCube structure/event references checked against the actual PS2 menu archive identify the health cheat's pause counter and its separate 11-member power-up refresh group. [Findings, pinned sources and reproduction](docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md). Xbox documentation reviewed; no Xbox executable comparison or new game patch in this pass.
+
+
 **Stable release:** [v0.3](https://github.com/richard1222/SpongeBob-SquarePants-movie-game-ps2-cheat-codes/releases/tag/v0.3) — owner-tested custom HealthMenu for CFW PS3 Slim `ps2_netemu`, with all seven tested cumulative patcher stages. **Active development: v0.4**, investigating the *original* Heavy Iron retail cheat system. This does **not** indicate a published v0.4 release. [v0.4 milestone and release gates](releases/v0.4/DEVELOPMENT_STATUS.md).
 
 **v0.4 first hardware milestone — October 22, 2026:** Muse traced `zGameCheatsUpdate` at PS2 retail address `0x002D2740` and confirmed a nine-record cheat table. A separate one-data-byte `CheatSeq-TEST` ISO replaced the Patrick Caveman code with **Square ×6, Circle ×2**. On PS3 Slim, the owner reported success sound for the new sequence and no success for the replaced original sequence; Muse verified the mounted ISO's SHA-256 `f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac`. **Correct entry:** start a level, pause with START, hold all four shoulder buttons L1+L2+R1+R2, then press the Square/Circle sequence. The initial *Triangle* instructions were incorrect. This probe uses the **original retail ISO**, not a combined HealthMenu+cheat build. [PS2 instruction-level trace](docs/V0.4-PS2-CHEAT-TRACE-2026-10-22.md) · [Probe and verification](tools/cheat-seq-test/).

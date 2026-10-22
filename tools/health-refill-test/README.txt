@@ -83,7 +83,7 @@ INDEPENDENT REVIEW - 2026-10-22
 saved registers, stack return, slots, bonus bytes and UI-call behavior checked.
 The existing ISO hash and its extracted executable match the tested bytes.
 The callback's UI tail refers to PAUSESTATE MENU OR POWERUP COUNTER at
-0x61FEC4 and calls the UI function when the found object's state EQUALS 2.
+0x61FEC4 and calls the UI function when the found counter's count EQUALS 2.
 Earlier HP-confirm string and inverted-state descriptions were incorrect.
 No candidate ISO bytes changed. The owner subsequently reported it worked and
 produced six; broader hazard, character and transition coverage remains open.
@@ -97,3 +97,8 @@ OWNER RESULT - 2026-10-22
 Exact report after the supplied refill test: "it worked i got 6".
 Keep this isolated candidate and stable v0.3 as separate baselines. A combined
 HealthMenu-plus-refill build has not been tested or released.
+
+MENU ASSET FOLLOW-UP - 2026-10-22
+The actual PS2 MNUI.HIP confirms the checked object is CNTR. The conditional
+event targets PU SET TEXT ALL GROUP, containing 11 members including the
+health-upgrade condition. See docs/PS2-MENU-CROSS-PLATFORM-2026-10-22.md.

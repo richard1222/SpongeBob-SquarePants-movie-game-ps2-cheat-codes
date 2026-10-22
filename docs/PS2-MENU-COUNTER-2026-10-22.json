@@ -1,0 +1,91 @@
+{
+  "archive": "MNUI.HIP",
+  "size": 4837376,
+  "sha256": "119771102d55561f4cc9357093f2ea22b0bc02e0eb8e836f15085470eb6784dc",
+  "asset_headers_checked": 1156,
+  "selected_assets": [
+    {
+      "id": "0x5BCC2912",
+      "type": "GRUP",
+      "name": "PU SET TEXT ALL GROUP",
+      "header_offset": 30952,
+      "payload_offset": 4599312,
+      "payload_size": 56,
+      "base_type": 17,
+      "link_count": 0,
+      "base_flags": "0x001D",
+      "item_count": 11,
+      "delegation": 0,
+      "members": [
+        {
+          "id": "0xCF4D91A0",
+          "name": "PU_UGRADE_COND BA LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xCAD1DD13",
+          "name": "PU_UGRADE_COND BB LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xB8E30ADF",
+          "name": "PU_UGRADE_COND BF LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0x215EA95B",
+          "name": "PU_UGRADE_COND CW LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xC83DA473",
+          "name": "PU_UGRADE_COND HP LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xBACA86CC",
+          "name": "PU_UGRADE_COND HS LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xD8E25A57",
+          "name": "PU_UGRADE_COND KS LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0xCAAE367C",
+          "name": "PU_UGRADE_COND SB LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0x6C8866EB",
+          "name": "PU_UGRADE_COND SW LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0x647A9707",
+          "name": "PU_UGRADE_COND TH LV 0",
+          "type": "COND"
+        },
+        {
+          "id": "0x04733F30",
+          "name": "PU EVAL ALL HASH COND",
+          "type": "GRUP"
+        }
+      ]
+    },
+    {
+      "id": "0xC052244B",
+      "type": "CNTR",
+      "name": "PAUSESTATE MENU OR POWERUP COUN",
+      "header_offset": 57118,
+      "payload_offset": 4599376,
+      "payload_size": 12,
+      "base_type": 22,
+      "link_count": 0,
+      "base_flags": "0x001D",
+      "initial_count": 1
+    }
+  ],
+  "limits": "Metadata only; no runtime event execution or cross-platform address mapping."
+}
