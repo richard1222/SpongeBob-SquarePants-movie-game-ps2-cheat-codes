@@ -1,0 +1,12 @@
+{
+  "input_sha256": "c0494ad78fab34dc19fb52b831facb1b27500e66bf0a57a77e627e7b805096f0",
+  "patches": [
+    {
+      "va": 6273888,
+      "old": "00000200",
+      "new": "00000800",
+      "iso_offset": 880581600
+    }
+  ],
+  "output_sha256": "f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac"
+}

@@ -1,0 +1,26 @@
+{
+  "stage": "cheat-seq-test",
+  "purpose": "v0.4 research probe: verify the traced retail cheat-input handler (zGameCheatsUpdate at 0x002D2740) and cheatList record layout by changing one entry-sequence word in data only. No code bytes change.",
+  "hardware_tested": false,
+  "input_sha256": "c0494ad78fab34dc19fb52b831facb1b27500e66bf0a57a77e627e7b805096f0",
+  "output_sha256": "f603d78aa4be977bdc06d4ab77da322547c549de764fe580501bd90a2225e4ac",
+  "output_md5": "646f9fee14890478398193528251b18e",
+  "iso_bytes": 1249804288,
+  "different_bytes": 1,
+  "patch_windows": [
+    [
+      880581600,
+      880581604
+    ]
+  ],
+  "elf_va": "0x005FBB60",
+  "old_word": "0x00020000 (Circle)",
+  "new_word": "0x00080000 (Triangle)",
+  "cheat_record": "cheatList[8] at 0x005FBD30; key_code 0x005FBB30; changed word index 12 of 16 (5th of 8 presses)",
+  "old_sequence": "Triangle Triangle Triangle Triangle Circle Triangle Circle Circle",
+  "new_sequence": "Triangle Triangle Triangle Triangle Triangle Triangle Circle Circle",
+  "flag_bit": "0x10000000",
+  "save_persistence": "none: zGameExtras_Save at 0x002D2AB0 writes flags & 0xFFFF only, so bit 0x10000000 is never persisted",
+  "patcher_guards": "wrong source and existing output rejected; Windows PowerShell produced verified ISO",
+  "built_on": "Neptune, 2026-10-22"
+}
