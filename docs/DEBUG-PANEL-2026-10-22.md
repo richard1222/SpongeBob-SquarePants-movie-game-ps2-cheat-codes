@@ -2,6 +2,16 @@
 
 Target: USA PS2 `SLUS_209.04`, CFW PS3 testing. Goal: validate show/hide, row selection, and test-value activation before adding gameplay controls.
 
+## Hardware result — October 22, 2026
+
+**Confirmed by owner report:** after launching the panel candidate and receiving the test sequence—heading and row visible, Up selection, X OFF/ON changes, Down deselection, and Select hide/show—the owner reported **“IT WORKED”** and requested a GitHub update. The custom panel's basic display and interaction test is now hardware-confirmed by owner report on the established CFW PS3 setup (CECH-2001A).
+
+No photo/video, detailed per-mode results, or extended stability test has been supplied. The report confirms the basic panel test as described; it does not establish every game mode, save/load behavior, or restoration of an original developer menu. The test row remains display-only and has no gameplay effect.
+
+Candidate identity: output SHA-256 `9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b` from the supplied build. No independent console-side hash was provided. Earlier pending/unverified statements below describe the pre-test stage and are superseded for this basic interaction by the owner's report.
+
+**Next:** preserve this working panel as the baseline. Investigate and verify one real control independently before adding it as a new row.
+
 ## Rundown
 
 **Proven owner reports:** the controller/status overlay and custom Select toggle worked on the owner's CFW PS3. **Proven static result:** a first custom panel candidate now reuses the retained text renderer, presents one selectable test row, and passes 192 emitted-instruction cases plus a nine-step interaction sequence. The patcher produced a full ISO with changes restricted to four intended windows. **Unknown:** the panel's actual rendering and interaction on the console. No screenshot or new hardware result is claimed.
@@ -31,7 +41,7 @@ State shares the existing debug word: bit 0 visible, bit 1 row selected, bit 2 t
 | Wrong-source guard | Rejected |
 | Output overwrite guard | Rejected |
 | Full-ISO comparison | 328 differing bytes, all inside four intended windows |
-| Console rendering/input | Pending |
+| Console rendering/input | Basic panel test passed by owner report, October 22, 2026; broader mode/stability coverage unknown |
 
 - Input SHA-256: `78b5b1530a179ad25a2e06167b24aacc369977d57fcdc9b0433d0f7b120303f7`.
 - Output SHA-256: `9da1560b7ae33e50624aa0699ada215a40a984a5b12dbeb6a1395ed63709d32b`.
