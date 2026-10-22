@@ -2,6 +2,14 @@
 
 Date: 2026-10-21. Target: USA `SLUS_209.04`. Goal: identify retained debug-menu functionality and test a minimal diagnostic before changing control flow.
 
+## Owner hardware report — October 21, 2026
+
+**Proven report:** after receiving the controller-debug probe and PS3 testing instructions, the owner reported **“it worked”** and requested that this result be recorded on GitHub. This is an owner-reported successful probe test in the established CFW PS3 context (CECH-2001A), not an independently observed runtime result.
+
+**Unknown:** the owner has not yet specified whether “worked” means successful boot alone or a visible controller/status overlay. No screenshot/video, displayed text, exact runtime behavior, save/load result, or stability duration has been supplied. A complete debug menu remains unconfirmed. The next step is to capture the visible result and identify which retained debug feature is active.
+
+The original static-analysis and pre-test record below is retained as history; references to pending testing describe that earlier stage.
+
 ## Rundown
 
 **Proven:** the actual Movie USA PS2 ISO has now been inspected. Its INI parser reads `displayPadDebugInfo`, and a surviving code path tests that variable before calling a substantial handler. A separate diagnostic ISO enables that setting without changing the executable. **Inference:** this is a useful way to test the retained controller-debug display. **Unknown:** the handler's visible behavior and whether a usable developer menu can be restored. No working menu is claimed.
@@ -47,7 +55,7 @@ A normal pip install stalled and was stopped; the official Capstone 5.0.6 Window
 
 Boot the local controller-debug probe using the owner's normal CFW PS3 PS2 ISO route, without additional cheats. Inspect title/menu and gameplay for controller/status output; record boot result, visible text, and a photo/video if output appears. The probe is not a restored menu. Its result will determine whether to investigate the retained handler or prioritize a different UI path.
 
-The copyrighted ISO and extracted assets remain local. Only documentation and hashes are published.
+No copyrighted ISO or extracted game assets are committed to this repository. This page publishes documentation and hashes.
 
 ## Reference
 
