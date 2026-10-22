@@ -31,7 +31,7 @@ Free camera and level selection are outside the current requested scope. This is
 
 ## Current status
 
-**Latest — October 22, 2026:** the owner reports that the real music pause/resume test **worked** on the CFW PS3. A new **three-row custom debug-menu ISO** now adds guarded XYZ and scene/controller diagnostics while retaining that music control and Select hide/show. It passes 4,992 instruction cases, 36 pointer-guard cases, a 12-step sequence, and a full-image comparison showing 656 changed bytes in five intended windows. **The expanded menu's hardware test is pending.** [Tools and controls](tools/debug-menu/) · [Implementation, hashes and first-console-test receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This remains a custom interface; original developer-menu restoration is unconfirmed.
+**Latest — October 22, 2026:** the owner reports that the real music pause/resume test **worked** on the CFW PS3. A new **three-row custom debug-menu ISO** now adds guarded XYZ and scene/controller diagnostics while retaining that music control and Select hide/show. It passes 4,992 instruction cases, 36 pointer-guard cases, a 12-step sequence, and a full-image comparison showing 656 changed bytes in five intended windows. **The owner subsequently reported “it worked fine” for the expanded menu on the established CFW PS3 setup.** This records basic reported success; individual feature and transition coverage were not separately described. [Tools and controls](tools/debug-menu/) · [Implementation, hashes and first-console-test receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This remains a custom interface; original developer-menu restoration is unconfirmed.
 
 | Work | Status |
 | --- | --- |
@@ -43,7 +43,7 @@ Free camera and level selection are outside the current requested scope. This is
 | Obtain the working ISO | Actual Movie USA ISO found locally and inspected on October 21, 2026. |
 | Inspect executable and assets | Executable and INI inspected; retained debug-display path traced. Menu asset investigation continues. |
 | Custom debug panel | Basic display, row selection, test-value changes and Select hide/show confirmed by owner report. Original developer-menu restoration remains unconfirmed. |
-| Patches | Overlay, Select toggle, first custom panel and music pause/resume owner-confirmed; expanded three-row menu statically verified, hardware test pending. |
+| Patches | Overlay, Select toggle, first custom panel and music pause/resume owner-confirmed; expanded three-row menu now reported working by the owner; extended stability remains unverified. |
 
 ## Prototype findings
 
@@ -75,7 +75,7 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 
 ## Next steps
 
-1. Test the expanded three-row menu on the CFW PS3, especially title/loading guards, live XYZ, scene/controller readouts, row navigation and transitions. Preserve the owner-tested Music-TEST baseline.
+1. Preserve the owner-tested expanded DebugMenu-TEST baseline. Record detailed XYZ/scene/controller behavior and transition coverage before expanding the menu further.
 2. Use the verified USA executable/hash baseline in [the debug-path receipt](docs/DEBUG-PATH-2026-10-21.md).
 3. Inspect executable strings and code references for debug menus, development flags, cheat handlers, and disabled features.
 4. Inspect HIP/HOP assets for unused UI and development content; compare relevant prototypes where useful.
@@ -96,13 +96,13 @@ These are published cheat sequences, not evidence of a developer debug menu. Rec
 | Working ISO access | ✅ Inspected | USA ISO, executable and INI verified locally |
 | Executable and asset inspection | 🔄 In progress | Retained debug path traced; full menu investigation pending |
 | Original developer-menu activation | ⏳ Pending | Custom panel works by owner report; original menu not recovered |
-| Hardware validation | 🔄 In progress | Overlay, Select toggle, basic custom panel and music owner-confirmed; expanded diagnostics and broader modes/stability pending |
+| Hardware validation | 🔄 In progress | Overlay, Select toggle, basic custom panel and music owner-confirmed; expanded menu also reported working; detailed diagnostic coverage and broader modes/stability remain unverified |
 
 **Legend:** ✅ Documented or defined · 🔄 In progress · ⏳ Pending
 
 ## Tools
 
-**Newest candidate:** [expanded debug-menu patcher](tools/debug-menu/) — three selectable rows for music, guarded XYZ, and scene/controller diagnostics. Use the matching Music-TEST input. [Build and verification receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). This new layout/readout build still needs console testing.
+**Newest candidate:** [expanded debug-menu patcher](tools/debug-menu/) — three selectable rows for music, guarded XYZ, and scene/controller diagnostics. Use the matching Music-TEST input. [Build and verification receipt](docs/EXPANDED-DEBUG-MENU-2026-10-22.md). The owner reports this build worked fine on the CFW PS3; extended testing remains open.
 
 **v0.1 bundles the complete toolset:** [overlay](tools/overlay/), [Select toggle](tools/select-toggle/), [custom panel](tools/debug-panel/), [music pause/resume candidate](tools/music-panel/), tests and research utilities. See [release notes and verification status](releases/v0.1/RELEASE_NOTES.md). Music audio behavior is now confirmed by owner report; extended mode/transition behavior remains unverified.
 
