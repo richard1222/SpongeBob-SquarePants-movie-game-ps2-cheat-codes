@@ -4,7 +4,7 @@
   "interaction_steps": 12,
   "retail_music_instructions_executed": true,
   "position_scene_and_sound_backend": "external calls modeled; retail position/scene bodies inspected statically",
-  "hardware_tested": false,
+  "hardware_tested": true,
   "source_music_hardware": "owner reported it worked on CFW PS3 on 2026-10-22",
   "input_sha256": "973e1ed3098acef2d211c2fbbc877bff4bec17687ff00627949a631665ea9b13",
   "output_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
@@ -34,5 +34,14 @@
     ]
   ],
   "operator_patcher": "Windows PowerShell generated full ISO; wrong input and existing output rejected",
-  "new_menu_hardware_tested": false
+  "new_menu_hardware_tested": true,
+  "hardware_evidence": {
+    "type": "owner_report",
+    "date": "2026-10-22",
+    "platform": "CFW PS3 running the USA PS2 build",
+    "report": "it worked fine",
+    "build_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
+    "scope": "General success reported for the supplied expanded DebugMenu-TEST.iso. Individual readouts, game modes and transition coverage were not separately described.",
+    "extended_stability_verified": false
+  }
 }
