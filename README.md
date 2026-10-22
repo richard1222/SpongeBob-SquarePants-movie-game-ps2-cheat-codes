@@ -1,7 +1,7 @@
 ![Platform](https://img.shields.io/badge/Platform-PS2-blue)
 ![Region](https://img.shields.io/badge/Target_Region-USA-green)
 ![Serial](https://img.shields.io/badge/Target_Serial-SLUS__209.04-orange)
-![Status](https://img.shields.io/badge/Status-Research_in_progress-yellow)
+![Status](https://img.shields.io/badge/Status-Working_PS3_Build-blue)
 
 # The SpongeBob SquarePants Movie (PS2) — cheats and debug research
 
