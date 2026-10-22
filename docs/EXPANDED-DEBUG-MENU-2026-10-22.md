@@ -6,9 +6,9 @@
 
 ## Rundown
 
-A new custom debug-menu ISO is built. It retains the music pause/resume behavior the owner just confirmed, adds selectable XYZ and scene/controller diagnostic rows, and keeps Select hide/show. The new menu is a hardware-test candidate, not a recovered original developer menu.
+A new custom debug-menu ISO is built. It retains the music pause/resume behavior the owner just confirmed, adds selectable XYZ and scene/controller diagnostic rows, and keeps Select hide/show. The owner subsequently reported “it worked fine” on the established CFW PS3 setup. It remains a custom menu; the original developer menu has not been recovered.
 
-The new readouts are OFF at boot. Enabling them checks pointers before calling the game's own text formatters. Invalid pointers show N/A. The owner now needs to check the expanded layout and diagnostic rows at title, in gameplay, and through transitions.
+The new readouts are OFF at boot. Enabling them checks pointers before calling the game's own text formatters. Invalid pointers show N/A. General console success is reported. Detailed title/gameplay/transition and per-readout coverage were not separately described.
 
 ## Current truth
 
@@ -19,7 +19,8 @@ The new readouts are OFF at boot. Enabling them checks pointers before calling t
 | Proven | Windows patcher generated the full image and rejected a wrong input and existing output. | Output SHA-256 below; the final patcher was run again in an isolated local check and produced the same hash. |
 | Proven | 656 changed bytes are confined to five intended windows. | Full source/output comparison and exact patch-byte checks; receipt records windows. |
 | Inference | The added diagnostics should stay usable when player/scene objects are absent. | Null/range/alignment checks and simulated invalid-pointer cases. Runtime object lifetime is not established by static guards alone. |
-| Unknown | Expanded layout, transitions and diagnostic rows work reliably on the PS3. | First hardware test pending. No new console screenshot is available. |
+| Proven | The owner reports the supplied expanded DebugMenu-TEST.iso worked fine on the CFW PS3. | Owner message “it worked fine”, October 22, 2026; this is reported basic success. |
+| Unknown | Every diagnostic row and transition remains reliable across game modes and long sessions. | No detailed coverage list or console screenshot supplied. |
 
 ## Controls and expected behavior
 
@@ -47,8 +48,10 @@ The original 0x460-byte rendering frame is retained. Temporary readout strings a
 
 The patcher uses .NET hashing directly so it does not depend on Get-FileHash availability in the PowerShell environment. This was checked after a child-shell verification run exposed the missing cmdlet.
 
-## First console test
+## Console report and remaining coverage
 
-Boot, check the three-row layout and row wrapping, then verify the retained music control. Enable both diagnostic rows at title and in gameplay. Move to check XYZ, change levels to check scene ID, and check hide/show, death/restart and returning to title. Report crashes, flicker, missing text, stale values or unexpected audio changes.
+**Owner report, October 22, 2026:** “it worked fine” after the supplied expanded-menu ISO and controls. This supersedes the earlier first-test-pending status. No new build or ISO change was made for this documentation update.
+
+Remaining coverage checklist: boot, check the three-row layout and row wrapping, then verify the retained music control. Enable both diagnostic rows at title and in gameplay. Move to check XYZ, change levels to check scene ID, and check hide/show, death/restart and returning to title. Report crashes, flicker, missing text, stale values or unexpected audio changes.
 
 The original Music-TEST image remains a known baseline by owner report. The prior v0.1 release is unchanged. New tools and receipts are in [tools/debug-menu](../tools/debug-menu/). No game image, executable, external SDK binaries or account data are committed.
