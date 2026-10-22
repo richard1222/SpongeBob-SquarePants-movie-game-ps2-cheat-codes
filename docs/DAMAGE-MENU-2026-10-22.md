@@ -9,7 +9,7 @@
 
 A new custom menu candidate adds row 4, `Damage 1` / `Damage 0`, to the owner-tested three-row menu. Select shows/hides, Up/Down wraps through four rows, and X changes the selected row. The previous music, XYZ and scene/controller rows remain.
 
-**Proven locally:** instruction simulation, source/output hash checks and a complete ISO comparison passed. **Unknown:** the candidate's behavior on the console. No new owner test or console screenshot has been received. This is a custom menu, not recovery of the original developer interface.
+**Proven locally:** instruction simulation, source/output hash checks and a complete ISO comparison passed. **Owner report:** “it works fine” after receiving this four-row candidate and its 1 → 0 → 1 test instructions, on the established CFW PS3 setup. This confirms basic reported success. Individual damage prevention/restoration observations and extended coverage were not separately described; no console screenshot was supplied. This is a custom menu, not recovery of the original developer interface.
 
 ## Retail discovery
 
@@ -34,7 +34,8 @@ The menu retains its existing input path; normal gameplay button actions can sti
 | Proven | Explicit checks cover 0/1 toggling, noncanonical incoming values, hidden-menu isolation and other-row isolation. | Simulation, not a hardware result. |
 | Proven | Windows PowerShell created the image; wrong source and existing output were rejected. | Only the named source image is supported. |
 | Proven | Full comparison found **388 changed bytes**, all within the five existing patch windows; output remains **1,249,804,288 bytes**. | Does not establish runtime stability. |
-| Unknown | Ordinary enemy damage stops and resumes on the owner's console. | Requires the test below. |
+| Proven: owner report | The owner reports “it works fine” for this four-row candidate. | Basic reported success; separate damage-off/damage-on observations were not described. |
+| Unknown | Complete hazard, restart, character and transition coverage. | Not established by the general success report. |
 
 Input SHA-256: `53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8`.
 
@@ -44,7 +45,7 @@ Output MD5: `5bb8149862a63187f93eecf1f2ebf5d0`.
 
 The action block uses 428 of its 428 audited bytes. Other capacities remain unchanged. The tests exercise emitted instructions, including a useful LUI in the new dispatch branch's delay slot. Existing renderer initialization and epilogue remain outside the changed regions.
 
-## Next console test
+## Further console coverage
 
 1. Boot the separate DamageMenu-TEST ISO and check all four rows and Select hide/show.
 2. At Damage 1, find a repeatable ordinary enemy hit that removes health.
@@ -54,3 +55,7 @@ The action block uses 428 of its 428 audited bytes. Other capacities remain unch
 
 The [patcher and reproducible tests](../tools/damage-menu/) contain original tools and patch metadata, with no game image, full executable or SDK binaries. The owner-tested three-row ISO is retained as the fallback.
 
+
+## Owner hardware report — October 22, 2026
+
+The owner replied **“it works fine”** to the supplied DamageMenu-TEST download and damage-toggle test. This supersedes the initial pending status above. The build is now an owner-reported working baseline on the established CFW PS3 setup. Preserve its output hash and the previous three-row fallback. Broader reliability, every death route and detailed per-step outcomes remain unknown; no new ISO or instruction change accompanies this status update.

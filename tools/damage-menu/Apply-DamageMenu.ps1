@@ -53,7 +53,7 @@ try {
     Write-Host "Created: $destination"
     Write-Host "SHA-256: $hash"
     Write-Host 'SELECT show/hide; UP/DOWN selects rows 1-4; X changes the selected row. Row 1 music, row 2 XYZ display, row 3 scene/controller display, row 4 damage flag (1 normal, 0 disabled).'
-    Write-Host 'This is a custom four-row damage-menu candidate, not an original developer menu. Hardware test pending.'
+    Write-Host 'This is a custom four-row damage-menu candidate, not an original developer menu. Owner-reported working on CFW PS3; extended coverage unverified.'
 } catch {
     Write-Error $_
     exit 1

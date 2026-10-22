@@ -4,8 +4,8 @@
   "interaction_steps": 12,
   "retail_music_instructions_executed": true,
   "position_scene_and_sound_backend": "external calls modeled; retail position/scene bodies inspected statically",
-  "hardware_tested": false,
-  "damage_flag_hardware_tested": false,
+  "hardware_tested": true,
+  "damage_flag_hardware_tested": true,
   "source_music_hardware": "owner reported it worked on CFW PS3 on 2026-10-22",
   "input_sha256": "53f66e48d05bf22c5e3ac351f220526a912f067e65d08a430f76657a47e9b8f8",
   "output_sha256": "9df1860529ac4e6e5d2bb542ba59b1c171bb1ae797a24c8aef80eb75c4a12630",
@@ -38,5 +38,15 @@
   "initial_value_write": "0x0046BA98",
   "patcher_guards": "wrong source and existing output rejected; Windows PowerShell produced verified ISO",
   "retail_damage_subtraction_cases": 96,
-  "retail_damage_scope": "actual instructions 0x32b774 through health write at 0x32baec; other paths untested"
+  "retail_damage_scope": "actual instructions 0x32b774 through health write at 0x32baec; other paths untested",
+  "hardware_evidence": {
+    "date": "2026-10-22",
+    "source": "owner report in chat",
+    "quote": "it works fine",
+    "environment": "established CFW PS3 CECH-2001A setup",
+    "scope": "basic reported success for supplied four-row DamageMenu-TEST after 1 -> 0 -> 1 test instructions",
+    "individual_damage_off_on_observations_recorded": false,
+    "extended_hazard_transition_coverage_verified": false,
+    "screenshot_supplied": false
+  }
 }

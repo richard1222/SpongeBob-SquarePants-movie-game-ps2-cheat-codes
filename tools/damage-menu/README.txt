@@ -13,7 +13,7 @@ The game initializes the flag to 1. The menu only changes it on X at row 4.
 Hiding the menu does not restore damage. Set Damage back to 1 before hiding.
 The menu does not consume buttons: normal gameplay actions can also occur.
 
-HARDWARE TEST PENDING. This is a custom menu, not an original developer menu.
+OWNER-REPORTED WORKING: "it works fine", 2026-10-22, established CFW PS3 setup. This is a custom menu, not an original developer menu.
 The flag is statically traced to retail reads and an initialization write.
 This is not a promise of protection against every death, pit or scripted event.
 
@@ -29,7 +29,8 @@ Test in ordinary gameplay, without saving during this experiment:
 Instruction simulation checks navigation, flag writes, 0/1 restoration,
 noncanonical incoming values, hidden-menu isolation, music and pointer guards.
 The simulator models external scene/position formatters and the sound backend.
-No runtime protection claim has been verified on the console yet.
+The owner reports basic success. Individual damage-off/damage-on outcomes and
+broader hazard/transition coverage were not separately described.
 
 Developer instruction test (Python 3, standard library):
 python test_damage_menu.py "path/to/original/SLUS_209.04"
